@@ -1032,6 +1032,26 @@ footer {
     }
 }
 
+.hobby-link {
+    text-decoration: none;
+    color: inherit;
+    display: block; 
+}
+
+.hobby-link h4 {
+    color: #000;
+    transition: color 0.2s ease; 
+}
+
+.hobby-link:hover .hobby-card {
+    border-color: var(--accent);
+    background-color: #f5f3ff; 
+}
+
+.hobby-link:hover h4 {
+    color: var(--accent); 
+}
+
 /* ==========================================================================
    PROJECTS TIMELINE (FINAL FIX)
    ========================================================================== */
