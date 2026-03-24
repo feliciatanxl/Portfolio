@@ -880,35 +880,40 @@ footer {
 }
 
 .project-link-btn {
-    display: inline-flex;
+    display: flex; 
     align-items: center;
+    justify-content: center; 
     gap: 10px;
     margin-top: auto; 
     padding: 10px 16px;
-    background: #f8fafc;
-    color: #334155;
+    background: #fff;
+    color: #000;
     text-decoration: none;
     font-family: 'Fira Code', monospace;
     font-size: 0.85rem;
-    font-weight: 600;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    font-weight: 800;
+    border: 2px solid #000;
+    border-radius: 4px;
     transition: all 0.2s ease;
-    width: fit-content;
+    width: 100%; 
+    box-sizing: border-box;
 }
 
-    .project-link-btn i {
-        font-size: 1.1rem;
-        color: #000; 
-    }
+.project-link-btn i {
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
 
-    .project-link-btn:hover {
-        background: #fff;
-        border-color: #000;
-        color: #000;
-        transform: translateY(-2px);
-        box-shadow: 4px 4px 0px #000; 
-    }
+.project-link-btn:hover {
+    background: #000;
+    color: black;
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0px var(--accent);
+}
+
+.project-link-btn:hover i {
+    color: black !important; 
+}
 
 /* ==========================================================================
    HOBBY WIDGETS (For me.html)
@@ -1290,5 +1295,84 @@ footer {
     }
     .achievement-card.wide {
         grid-column: auto;
+    }
+}
+
+
+/* ==========================================================================
+   NAVBAR DROPDOWN MENU
+   ========================================================================== */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 250px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0px #000;
+    z-index: 200;
+    top: 100%;
+    left: 0;
+    margin-top: 0; 
+    border-radius: 4px;
+}
+
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-top: 2px solid #000;
+    border-left: 2px solid #000;
+    transform: rotate(45deg);
+}
+
+.dropdown-content a {
+    color: #000 !important;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #f1f1f1;
+    transition: all 0.2s ease;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8fafc;
+    color: var(--accent) !important;
+    padding-left: 25px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media (max-width: 850px) {
+    .dropdown-content {
+        position: static;
+        display: block; 
+        box-shadow: none;
+        border: none;
+        border-left: 2px solid var(--accent);
+        margin: 10px 0 10px 20px;
+        min-width: 100%;
+        background: transparent;
+    }
+    .dropdown-content::before {
+        display: none;
+    }
+    .dropdown-content a {
+        padding: 10px 15px;
     }
 }

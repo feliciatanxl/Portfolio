@@ -14,16 +14,24 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">'FT<span class="cursor-blink">_</span>'</a>
-
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
-
             <ul class="nav-links" id="nav-links">
                 <li><a href="me.html">About Me</a></li>
                 <li><a href="experience.html">Experiences</a></li>
+                
                 <li><a href="projects.html" class="active" style="color: var(--accent);">Projects</a></li>
-                <li><a href="achievements.html">Achievements</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" style="cursor: pointer;">Achievements <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="achievements.html">>_ Project Milestones</a>
+                        <a href="awards.html">>_ Academic Awards</a>
+                        <a href="certs.html">>_ Tech Certifications</a>
+                    </div>
+                </li>
+
                 <li><a href="competitions.html">Competitions</a></li>
                 <li><a href="index.html#contact" class="nav-btn">Contacts</a></li>
             </ul>

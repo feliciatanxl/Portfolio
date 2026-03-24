@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Certifications</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">'FT<span class="cursor-blink">_</span>'</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+             <ul class="nav-links" id="nav-links">
+                <li><a href="me.html">About Me</a></li>
+                <li><a href="experience.html">Experiences</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" class="active" style="color: var(--accent); cursor: pointer;">Achievements <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="achievements.html">>_ Project Milestones</a>
+                        <a href="awards.html">>_ Academic Awards</a>
+                        <a href="certs.html" style="color: var(--accent);">>_ Tech Certifications</a>
+                    </div>
+                </li>
+
+                <li><a href="competitions.html">Competitions</a></li>
+                <li><a href="index.html#contact" class="nav-btn">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 1000px;">
+        
+        <header class="section-header" style="text-align: center; margin-top: 60px; margin-bottom: 50px;">
+            <h1 class="section-title">Technical <span>./certs</span></h1>
+            <p class="contact-text" style="font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Industry-recognized certifications showcasing my commitment to continuous learning in the tech space.
+            </p>
+        </header>
+
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="window-bar">
+                    <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                    <div class="file-name">anthropic.cert</div>
+                </div>
+                <div class="window-body">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-robot" style="font-size: 2rem; color: #000;"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem; line-height: 1.2;">AI Fluency Framework & Foundations</h3>
+                            <span style="font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-secondary);">Anthropic | Nov 2025</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">AI Foundations</span>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 20px;">
+                        <a href="assets/certs/AI_Fluency.pdf" target="_blank" class="project-link-btn" style="font-size: 0.75rem; padding: 6px 12px; width: 100%; justify-content: center; background: #fff;">
+                            <i class="fas fa-file-pdf" style="font-size: 0.8rem; color: #e11d48;"></i> View PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="window-bar">
+                    <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                    <div class="file-name">aws_gen_ai.cert</div>
+                </div>
+                <div class="window-body">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-cloud" style="font-size: 2rem; color: #000;"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem; line-height: 1.2;">Generative AI & Machine Learning</h3>
+                            <span style="font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-secondary);">AWS | Jan 2026</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">Gen AI</span>
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">Prompt Eng.</span>
+                    </div>
+                    <div style="margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding-top: 20px;">
+                        <a href="assets/certs/AWS_Introduction to Generative AI - Art of the Possible.pdf" target="_blank" class="project-link-btn" style="font-size: 0.7rem; padding: 4px; justify-content: center; background: #fff;">Intro to Gen AI</a>
+                        <a href="assets/certs/AWS_Foundations of Prompt Engineering.pdf" target="_blank" class="project-link-btn" style="font-size: 0.7rem; padding: 4px; justify-content: center; background: #fff;">Prompting</a>
+                        <a href="assets/certs/AWS_No-code Machine Learning and Generative AI on AWS.pdf" target="_blank" class="project-link-btn" style="font-size: 0.7rem; padding: 4px; justify-content: center; background: #fff;">No-Code ML</a>
+                        <a href="assets/certs/AWS_Responsible Artificial Intelligence Practices.pdf" target="_blank" class="project-link-btn" style="font-size: 0.7rem; padding: 4px; justify-content: center; background: #fff;">Responsible AI</a>
+                        <a href="assets/certs/AWS_Planning a Generative AI Project.pdf" target="_blank" class="project-link-btn" style="font-size: 0.7rem; padding: 4px; justify-content: center; background: #fff;">Gen AI Project</a>
+                        <a href="assets/certs/AWS_AI.pdf" target="_blank" class="project-link-btn" style="font-size: 0.7rem; padding: 4px; justify-content: center; background: #fff;">Basics of AI</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="window-bar">
+                    <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                    <div class="file-name">ibm_ux.cert</div>
+                </div>
+                <div class="window-body">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-pen-nib" style="font-size: 2rem; color: #000;"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem; line-height: 1.2;">User Experience Design Fundamentals</h3>
+                            <span style="font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-secondary);">IBM | Jun 2025</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">UX / UI</span>
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">Design</span>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 20px;">
+                        <a href="assets/certs/IBM_UX Design.pdf" target="_blank" class="project-link-btn" style="font-size: 0.75rem; padding: 6px 12px; width: 100%; justify-content: center; background: #fff;">
+                            <i class="fas fa-file-pdf" style="font-size: 0.8rem; color: #e11d48;"></i> View PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="window-bar">
+                    <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                    <div class="file-name">ibm_web.cert</div>
+                </div>
+                <div class="window-body">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-code" style="font-size: 2rem; color: #000;"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem; line-height: 1.2;">Web Development Fundamentals</h3>
+                            <span style="font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-secondary);">IBM | Jun 2025</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">HTML5</span>
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">CSS</span>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 20px;">
+                        <a href="assets/certs/IBM_Web Development.pdf" target="_blank" class="project-link-btn" style="font-size: 0.75rem; padding: 6px 12px; width: 100%; justify-content: center; background: #fff;">
+                            <i class="fas fa-file-pdf" style="font-size: 0.8rem; color: #e11d48;"></i> View PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="window-bar">
+                    <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                    <div class="file-name">huawei_os.cert</div>
+                </div>
+                <div class="window-body">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-terminal" style="font-size: 2rem; color: #000;"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem; line-height: 1.2;">OS Basics & Practice with openEuler</h3>
+                            <span style="font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-secondary);">Huawei | Nov 2025</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">Linux Admin</span>
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">OS Basics</span>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 20px;">
+                        <a href="assets/certs/Huawei_OS Basics.png" target="_blank" class="project-link-btn" style="font-size: 0.75rem; padding: 6px 12px; width: 100%; justify-content: center; background: #fff;">
+                            <i class="fas fa-file-image" style="font-size: 0.8rem; color: #2563eb;"></i> View Image
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="window-bar">
+                    <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                    <div class="file-name">huawei_iot.cert</div>
+                </div>
+                <div class="window-body">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-network-wired" style="font-size: 2rem; color: #000;"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem; line-height: 1.2;">Overview of IoT Technologies</h3>
+                            <span style="font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-secondary);">Huawei | Nov 2025</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">IoT</span>
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">LAN-WAN</span>
+                    </div>
+                    <div style="margin-top: auto; padding-top: 20px;">
+                        <a href="assets/certs/Huawei_Overview of IoT.png" target="_blank" class="project-link-btn" style="font-size: 0.75rem; padding: 6px 12px; width: 100%; justify-content: center; background: #fff;">
+                            <i class="fas fa-file-image" style="font-size: 0.8rem; color: #2563eb;"></i> View Image
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="window-bar">
+                    <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                    <div class="file-name">nets_apis.cert</div>
+                </div>
+                <div class="window-body">
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                        <i class="fas fa-qrcode" style="font-size: 2rem; color: #000;"></i>
+                        <div>
+                            <h3 style="margin: 0; font-size: 1.1rem; line-height: 1.2;">Sandbox Integrations (QR & eNETS)</h3>
+                            <span style="font-family: 'Fira Code', monospace; font-size: 0.75rem; color: var(--text-secondary);">NETS | Sep 2025</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">QR Web</span>
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">eNETS Web</span>
+                        <span class="code-name" style="font-size: 0.7rem; padding: 2px 8px;">QR Mobile</span>
+                    </div>
+                    <div style="margin-top: auto; display: flex; gap: 8px; padding-top: 20px;">
+                        <a href="assets/certs/NETS_QRWeb.pdf" target="_blank" class="project-link-btn" style="font-size: 0.7rem; padding: 4px 8px; flex: 1; justify-content: center; background: #fff;">QR Web</a>
+                        <a href="assets/certs/eNETS_Web.pdf" target="_blank" class="project-link-btn" style="font-size: 0.7rem; padding: 4px 8px; flex: 1; justify-content: center; background: #fff;">eNETS</a>
+                        <a href="assets/certs/NETS_QRMobile.pdf" target="_blank" class="project-link-btn" style="font-size: 0.7rem; padding: 4px 8px; flex: 1; justify-content: center; background: #fff;">Mobile</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer><p>© 2026 Felicia Tan. Handcrafted with &lt;code /&gt;</p></footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
