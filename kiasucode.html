@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiasuCode - Academic Tech Lead</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">'FT<span class="cursor-blink">_</span>'</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="me.html">About Me</a></li>
+                <li><a href="experience.html">Experiences</a></li>
+                <li><a href="projects.html" class="active" style="color: var(--accent);">Projects</a></li>
+                <li class="dropdown">
+                    <a href="#" style="cursor: pointer;">Achievements <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="achievements.html">>_ Project Milestones</a>
+                        <a href="awards.html">>_ Academic Awards</a>
+                        <a href="certs.html">>_ Tech Certifications</a>
+                    </div>
+                </li>
+                <li><a href="competitions.html">Competitions</a></li>
+                <li><a href="index.html#contact" class="nav-btn">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 900px; padding-bottom: 80px;">
+
+        <header style="margin-top: 50px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div>
+                <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 10px; line-height: 1.1; margin-top: 0;">KiasuCode</h1>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); font-family: 'Fira Code', monospace; margin: 0;">Academic Build Tracker with Dev-Lingua Personality</p>
+            </div>
+
+            <a href="projects.html" style="text-decoration: none; color: #000; font-family: 'Fira Code', monospace; font-size: 0.9rem; font-weight: 600; background: #f8fafc; padding: 10px 18px; border-radius: 8px; border: 2px solid #000; box-shadow: 3px 3px 0px #000; transition: all 0.2s ease;" onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='5px 5px 0px var(--accent)';" onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='3px 3px 0px #000';">
+                cd ../projects <i class="fas fa-arrow-right"></i>
+            </a>
+        </header>
+
+        <!-- <div class="project-card" style="padding: 0; overflow: hidden; margin-bottom: 40px;">
+            <div class="window-bar">
+                <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                <div class="file-name">bot_demo.mp4</div>
+            </div>
+            <div class="video-container">
+                <iframe src="https://drive.google.com/file/d/1i1QgbzcH0YSVfeBWV1kWn6itQ-c69Mp0/preview" title="Project Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div> -->
+
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
+
+            <div class="project-details">
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 15px;">The Problem</h2>
+                <p>Academic grade tracking is often a tedious, manual process prone to human error. Traditional tools lack engagement, making the maintenance of a consistent GPA repository feel like a chore rather than a vital part of a student's development cycle.</p>
+
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">The Solution</h2>
+                <p>
+                KiasuCode is a production-grade Telegram bot architected with <strong>Node.js</strong> and <strong>TypeScript</strong> that acts as a student's Senior Pair Programmer. Developed through a <strong>modern AI-assisted workflow</strong>, the project highlights technical maturity by leveraging LLMs for rapid prototyping and boilerplate scaffolding while maintaining strict architectural integrity through a normalized <strong>MySQL</strong> backend and 100% type safety.
+                </p>
+                <p>
+                The core innovation is a custom <strong>Dev-Lingua Middleware</strong> that intercepts bot responses to inject a hybrid persona of Singlish and developer jargon (e.g., "LGTM", "Steady lah"), ensuring a unique and engaging user experience. This architecture ensures that the personality layer remains decoupled from the core business logic, adhering to professional software design principles.
+                </p>
+                <!-- <div class="project-card" style="padding: 0; overflow: hidden; margin-top: 25px; margin-bottom: 25px;">
+
+                    <div class="window-bar" style="display: flex; align-items: center; justify-content: space-between;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                            <div class="file-name" id="carousel-filename" style="margin: 0;">1_bot_start.png</div>
+                        </div>
+
+                        <div style="display: flex; gap: 15px; margin-right: 5px;">
+                            <button onclick="changeSlide(-1)" style="background: none; border: none; cursor: pointer; font-family: 'Fira Code', monospace; font-weight: 800; font-size: 1.1rem; padding: 0; color: #000;">&lt;</button>
+                            <button onclick="changeSlide(1)" style="background: none; border: none; cursor: pointer; font-family: 'Fira Code', monospace; font-weight: 800; font-size: 1.1rem; padding: 0; color: #000;">&gt;</button>
+                        </div>
+                    </div>
+
+                    <div style="padding: 10px; background: #e2e8f0; position: relative;">
+                        <div class="img-slide" style="display: block; animation: fadeIn 0.4s;">
+                            <img src="assets/kiasucode/start.png" alt="Bot Start Command" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
+                        </div>
+                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
+                            <img src="assets/kiasucode/commit.png" alt="Module Commit" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
+                        </div>
+                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
+                            <img src="assets/kiasucode/gpa.png" alt="GPA Status" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
+                        </div>
+                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
+                            <img src="assets/kiasucode/help.png" alt="Command Reference" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
+                        </div>
+                    </div>
+                </div> -->
+
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Persona Middleware Logic</h2>
+                <div class="code-snippet">
+<pre><code><span class="k">export const</span> <span class="v">devLinguaMiddleware</span>: <span class="v">Middleware</span>&lt;<span class="v">Context</span>&gt; = <span class="k">async</span> (ctx, next) => {
+    <span class="k">const</span> <span class="v">originalReply</span> = ctx.reply.bind(ctx);
+    <span class="v">ctx.reply</span> = (<span class="v">text</span>, <span class="v">extra</span>) => {
+        <span class="k">let</span> <span class="v">flavorType</span> = <span class="s">"casual"</span>;
+        <span class="k">if</span> (text.toLowerCase().includes(<span class="s">"success"</span>)) <span class="v">flavorType</span> = <span class="s">"positive"</span>;
+        
+        <span class="k">const</span> <span class="v">enhancedText</span> = <span class="v">injectDevLingua</span>(text, <span class="v">flavorType</span>);
+        <span class="k">return</span> <span class="v">originalReply</span>(enhancedText, extra);
+    };
+    <span class="k">await</span> <span class="v">next</span>();
+};</code></pre>
+                </div>
+            </div>
+
+            <div>
+                <div class="project-card" style="padding: 25px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 15px;">Tech Stack</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px;">
+                        <span class="code-name">Node.js</span>
+                        <span class="code-name">TypeScript</span>
+                        <span class="code-name">Telegraf</span>
+                        <span class="code-name">MySQL</span>
+                        <span class="code-name">Dotenv</span>
+                        <span class="code-name" style="background: var(--accent-light); color: var(--accent);">AI-Assisted Dev</span>
+                    </div>
+
+                    <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Timeline</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 25px;">April 2026 - Present</p>
+
+                    <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Links</h3>
+
+                    <a href="https://github.com/feliciatanxl/KiasuCode" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box;">
+                        <i class="fab fa-github"></i> View Repo
+                    </a>
+                    <a href="https://t.me/KiasuCodeBot" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box; margin-top: 10px;">
+                        <i class="fab fa-telegram"></i> Launch Bot
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Felicia Tan. Handcrafted with &lt;code /&gt;</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".img-slide");
+        const filenameDisplay = document.getElementById("carousel-filename");
+
+        const fileNames = ["1_bot_start.png", "2_module_commit.png", "3_gpa_report.png", "4_help_menu.png"];
+
+        function changeSlide(n) {
+            slides[slideIndex].style.display = "none";
+            slideIndex = (slideIndex + n + slides.length) % slides.length;
+            slides[slideIndex].style.display = "block";
+            filenameDisplay.innerText = fileNames[slideIndex];
+        }
+    </script>
+</body>
+</html>
