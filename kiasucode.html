@@ -48,15 +48,16 @@
             </a>
         </header>
 
-        <!-- <div class="project-card" style="padding: 0; overflow: hidden; margin-bottom: 40px;">
+        
+        <div class="project-card" style="padding: 0; overflow: hidden; margin-bottom: 40px;">
             <div class="window-bar">
                 <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
-                <div class="file-name">bot_demo.mp4</div>
+                <div class="file-name">demo_recording.mp4</div>
             </div>
             <div class="video-container">
-                <iframe src="https://drive.google.com/file/d/1i1QgbzcH0YSVfeBWV1kWn6itQ-c69Mp0/preview" title="Project Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe src="https://drive.google.com/file/d/1TJUpWdRqoe2Yfp1rdW0PisVgp3uR0l_H/preview" title="Project Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-        </div> -->
+        </div>
 
         <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
 
@@ -66,54 +67,26 @@
 
                 <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">The Solution</h2>
                 <p>
-                KiasuCode is a production-grade Telegram bot architected with <strong>Node.js</strong> and <strong>TypeScript</strong> that acts as a student's Senior Pair Programmer. Developed through a <strong>modern AI-assisted workflow</strong>, the project highlights technical maturity by leveraging LLMs for rapid prototyping and boilerplate scaffolding while maintaining strict architectural integrity through a normalized <strong>MySQL</strong> backend and 100% type safety.
+                KiasuCode is a production-grade Telegram bot architected with <strong>Node.js</strong> and <strong>TypeScript</strong> that acts as a student's Senior Pair Programmer. Developed through a <strong>modern AI-assisted workflow</strong>, the project highlights technical maturity by leveraging LLMs for rapid prototyping and boilerplate scaffolding while maintaining strict architectural integrity through a normalized <strong>MySQL</strong> backend, live cloud deployment, and 100% type safety.
                 </p>
                 <p>
-                The core innovation is a custom <strong>Dev-Lingua Middleware</strong> that intercepts bot responses to inject a hybrid persona of Singlish and developer jargon (e.g., "LGTM", "Steady lah"), ensuring a unique and engaging user experience. This architecture ensures that the personality layer remains decoupled from the core business logic, adhering to professional software design principles.
+                The core innovation is a custom <strong>Dev-Lingua system</strong> that intercepts bot responses to inject a hybrid persona of Singlish and developer jargon (e.g., "LGTM", "Steady lah"), ensuring a unique and engaging user experience. The architecture ensures that the personality layer remains decoupled from the core business logic, adhering to professional software design principles.
                 </p>
-                <!-- <div class="project-card" style="padding: 0; overflow: hidden; margin-top: 25px; margin-bottom: 25px;">
 
-                    <div class="window-bar" style="display: flex; align-items: center; justify-content: space-between;">
-                        <div style="display: flex; align-items: center; gap: 15px;">
-                            <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
-                            <div class="file-name" id="carousel-filename" style="margin: 0;">1_bot_start.png</div>
-                        </div>
-
-                        <div style="display: flex; gap: 15px; margin-right: 5px;">
-                            <button onclick="changeSlide(-1)" style="background: none; border: none; cursor: pointer; font-family: 'Fira Code', monospace; font-weight: 800; font-size: 1.1rem; padding: 0; color: #000;">&lt;</button>
-                            <button onclick="changeSlide(1)" style="background: none; border: none; cursor: pointer; font-family: 'Fira Code', monospace; font-weight: 800; font-size: 1.1rem; padding: 0; color: #000;">&gt;</button>
-                        </div>
-                    </div>
-
-                    <div style="padding: 10px; background: #e2e8f0; position: relative;">
-                        <div class="img-slide" style="display: block; animation: fadeIn 0.4s;">
-                            <img src="assets/kiasucode/start.png" alt="Bot Start Command" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
-                        </div>
-                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
-                            <img src="assets/kiasucode/commit.png" alt="Module Commit" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
-                        </div>
-                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
-                            <img src="assets/kiasucode/gpa.png" alt="GPA Status" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
-                        </div>
-                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
-                            <img src="assets/kiasucode/help.png" alt="Command Reference" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
-                        </div>
-                    </div>
-                </div> -->
-
-                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Persona Middleware Logic</h2>
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Dev-Lingua Injection Utility</h2>
+                <p style="margin-bottom: 15px; font-size: 0.95rem; color: var(--text-secondary);">Initially designed as a global middleware, the architecture was refactored to a targeted utility function to prevent state conflicts and give absolute control over context-aware messaging.</p>
                 <div class="code-snippet">
-<pre><code><span class="k">export const</span> <span class="v">devLinguaMiddleware</span>: <span class="v">Middleware</span>&lt;<span class="v">Context</span>&gt; = <span class="k">async</span> (ctx, next) => {
-    <span class="k">const</span> <span class="v">originalReply</span> = ctx.reply.bind(ctx);
-    <span class="v">ctx.reply</span> = (<span class="v">text</span>, <span class="v">extra</span>) => {
-        <span class="k">let</span> <span class="v">flavorType</span> = <span class="s">"casual"</span>;
-        <span class="k">if</span> (text.toLowerCase().includes(<span class="s">"success"</span>)) <span class="v">flavorType</span> = <span class="s">"positive"</span>;
-        
-        <span class="k">const</span> <span class="v">enhancedText</span> = <span class="v">injectDevLingua</span>(text, <span class="v">flavorType</span>);
-        <span class="k">return</span> <span class="v">originalReply</span>(enhancedText, extra);
-    };
-    <span class="k">await</span> <span class="v">next</span>();
-};</code></pre>
+<pre><code><span class="k">export async function</span> <span class="v">replyWithFlavor</span>(
+    ctx: <span class="v">Context</span>, 
+    text: <span class="v">string</span>, 
+    flavorType: <span class="s">"positive"</span> | <span class="s">"negative"</span> | <span class="s">"casual"</span> = <span class="s">"casual"</span>
+) {
+    <span class="k">const</span> <span class="v">flavors</span> = <span class="v">DEV_LINGUA_FLAVORS</span>[flavorType];
+    <span class="k">const</span> <span class="v">randomFlavor</span> = flavors[<span class="v">Math</span>.floor(<span class="v">Math</span>.random() * flavors.length)];
+    
+    <span class="k">const</span> <span class="v">enhancedText</span> = <span class="s">`\${text}\n\n<i>- \${randomFlavor} -</i>`</span>;
+    <span class="k">return</span> <span class="k">await</span> <span class="v">ctx</span>.reply(<span class="v">enhancedText</span>, { parse_mode: <span class="s">'HTML'</span> });
+}</code></pre>
                 </div>
             </div>
 
@@ -125,7 +98,7 @@
                         <span class="code-name">TypeScript</span>
                         <span class="code-name">Telegraf</span>
                         <span class="code-name">MySQL</span>
-                        <span class="code-name">Dotenv</span>
+                        <span class="code-name">Railway (Cloud)</span>
                         <span class="code-name" style="background: var(--accent-light); color: var(--accent);">AI-Assisted Dev</span>
                     </div>
 
@@ -171,10 +144,11 @@
         const fileNames = ["1_bot_start.png", "2_module_commit.png", "3_gpa_report.png", "4_help_menu.png"];
 
         function changeSlide(n) {
+            if (slides.length === 0) return;
             slides[slideIndex].style.display = "none";
             slideIndex = (slideIndex + n + slides.length) % slides.length;
             slides[slideIndex].style.display = "block";
-            filenameDisplay.innerText = fileNames[slideIndex];
+            if (filenameDisplay) filenameDisplay.innerText = fileNames[slideIndex];
         }
     </script>
 </body>
