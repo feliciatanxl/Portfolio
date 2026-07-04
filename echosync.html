@@ -8,6 +8,18 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <style>
+        @media (max-width: 860px) {
+            .echosync-layout {
+                display: block !important;
+            }
+
+            .echosync-sidebar {
+                margin-top: 35px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -20,9 +32,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="me.html">About Me</a></li>
                 <li><a href="experience.html">Experiences</a></li>
-                
                 <li><a href="projects.html" class="active" style="color: var(--accent);">Projects</a></li>
-                
                 <li class="dropdown">
                     <a href="#" style="cursor: pointer;">Achievements <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px; vertical-align: middle;"></i></a>
                     <div class="dropdown-content">
@@ -31,7 +41,6 @@
                         <a href="certs.html">>_ Tech Certifications</a>
                     </div>
                 </li>
-
                 <li><a href="competitions.html">Competitions</a></li>
                 <li><a href="index.html#contact" class="nav-btn">Contacts</a></li>
             </ul>
@@ -43,7 +52,7 @@
         <header style="margin-top: 50px; margin-bottom: 60px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
             <div>
                 <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 10px; line-height: 1.1; margin-top: 0;">EchoSync</h1>
-                <p style="font-size: 1.2rem; color: var(--text-secondary); font-family: 'Fira Code', monospace; margin: 0;">AI-Assisted Pre-Arrival Intelligence Dashboard</p>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); font-family: 'Fira Code', monospace; margin: 0;">Pre-Arrival Emergency Intelligence</p>
             </div>
 
             <a href="projects.html" style="text-decoration: none; color: #000; font-family: 'Fira Code', monospace; font-size: 0.9rem; font-weight: 600; background: #f8fafc; padding: 10px 18px; border-radius: 8px; border: 2px solid #000; box-shadow: 3px 3px 0px #000; transition: all 0.2s ease;" onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='5px 5px 0px var(--accent)';" onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='3px 3px 0px #000';">
@@ -51,76 +60,68 @@
             </a>
         </header>
 
-        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
+        <div class="echosync-layout" style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
 
             <div class="project-details">
-                <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 15px;">The Problem</h2>
-                <p>In Singapore, over 2,500 people suffer Out-of-Hospital Cardiac Arrests (OHCA) annually. The most dangerous gap in emergency response is the "no-one-calls-for-help" blind spot during unwitnessed emergencies in residential HDBs. Existing solutions require manual activation, leading to delayed Community First Responder (CFR) deployment and devastatingly low survival rates.</p>
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 15px;">Project Overview</h2>
+                <p>
+                    EchoSync is a privacy-first, AI-assisted pre-arrival intelligence and first response ecosystem designed to help detect unwitnessed home emergencies before help is requested. It connects sensor-based detection, Edge AI verification, caregiver support, an SCDF-style dashboard, and a myResponder-style response flow.
+                </p>
+                <p>
+                    The project was developed for the SCDF and Dell Lifesavers’ Innovation Challenge 2026, where EchoSync was selected as a Top 5 Finalist out of 81 teams from 17 institutions.
+                </p>
+
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">The Problem</h2>
+                <p>
+                    In unwitnessed home emergencies, the most dangerous gap happens before the 995 call exists. Seniors living alone may experience a fall, collapse, or medical distress with no bystander nearby and no one able to call for help.
+                </p>
+                <p>
+                    Existing solutions such as panic buttons and wearables can help, but they still depend on the resident being conscious, able to move, and able to activate the device. EchoSync addresses this first-alert gap by detecting possible distress earlier and verifying it before escalation.
+                </p>
 
                 <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">The Dual-Pitch Solution</h2>
-                <p>I led the UI/UX design and Frontend architecture for EchoSync: a privacy-first, software-simulated ecosystem that translates edge-sensor anomalies into explainable alerts. This allows for earlier intervention without continuous video surveillance. The frontend ecosystem was adapted for two high-impact proposals:</p>
-                
+                <p>
+                    EchoSync was adapted for two proposal directions while keeping the same core idea: privacy-first emergency detection and safer community response.
+                </p>
+
                 <ul style="margin-bottom: 20px; color: var(--text-secondary); line-height: 1.6;">
-                    <li><strong>SCDF x Dell Innovation Challenge:</strong> Built a simulated dispatcher dashboard that receives high-confidence AI alerts and triggers a myResponder-aligned CFR workflow, prioritizing AED coordination before paramedics arrive.</li>
-                    <li><strong>NTU Pinnacle Prize:</strong> Optimized the interface for Smart City elderly care and non-invasive health monitoring, shifting focus from reactive response to preventive community protection.</li>
+                    <li>
+                        <strong>SCDF x Dell Innovation Challenge:</strong> Built a connected emergency response prototype with a SCDF-style dashboard, caregiver verification app, myResponder-style flow, multilingual voice check-in, risk scoring, and sensor-based alert detection.
+                    </li>
+                    <li>
+                        <strong>NTU Pinnacle Prize:</strong> Adapted the concept for Smart City elderly care and non-invasive health monitoring, focusing on privacy-first detection, explainable alerts, and preventive community response.
+                    </li>
                 </ul>
 
-                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">MVP Frontend Architecture</h2>
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Prototype Architecture</h2>
                 <div class="code-snippet" style="background: #f8fafc; border-color: #000; color: #000; margin-bottom: 30px;">
                     <ul style="list-style-type: none; padding-left: 0; margin: 0; font-family: 'Fira Code', monospace; font-size: 0.9rem;">
-                        <li style="margin-bottom: 12px;"><span style="color: var(--accent); font-weight: 800;">></span> <strong>Dispatcher Dashboard:</strong> React/Next.js interface displaying explainable AI confidence scores to reduce operator cognitive load.</li>
-                        <li style="margin-bottom: 12px;"><span style="color: var(--accent); font-weight: 800;">></span> <strong>CFR Routing UI:</strong> Mobile-responsive interface for Community First Responders, routing them to the exact unit and nearby AED staging points.</li>
-                        <li style="margin-bottom: 12px;"><span style="color: var(--accent); font-weight: 800;">></span> <strong>Vitals Relay Simulation:</strong> UI components to relay secure ECG telemetry from community AEDs directly to the SCDF dashboard.</li>
-                        <li><span style="color: var(--accent); font-weight: 800;">></span> <strong>Human-in-the-loop:</strong> Interface design ensures operators retain full override authority over alert escalations.</li>
+                        <li style="margin-bottom: 12px;"><span style="color: var(--accent); font-weight: 800;">></span> <strong>SCDF-style Dashboard:</strong> Displays high and critical alerts, map-based incidents, confidence score, AI summary, sensor evidence, and operator actions.</li>
+                        <li style="margin-bottom: 12px;"><span style="color: var(--accent); font-weight: 800;">></span> <strong>Caregiver App:</strong> Handles low and medium risk verification, caregiver context submission, node status, alert history, and multilingual preferences.</li>
+                        <li style="margin-bottom: 12px;"><span style="color: var(--accent); font-weight: 800;">></span> <strong>myResponder-style Flow:</strong> Demonstrates responder task acceptance, map guidance, active response, and completion logging after operator approval.</li>
+                        <li style="margin-bottom: 12px;"><span style="color: var(--accent); font-weight: 800;">></span> <strong>Sensor Prototype:</strong> Uses Raspberry Pi / Arduino signals such as sound, motion, ultrasonic distance, load cell readings, and voice check-in results.</li>
+                        <li><span style="color: var(--accent); font-weight: 800;">></span> <strong>Human-in-the-loop:</strong> AI supports triage and explanation, while caregivers and SCDF-style operators remain involved before escalation.</li>
                     </ul>
                 </div>
 
-                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Dashboard React Snippet</h2>
-                <div class="code-snippet">
-<pre><code><span class="s">// SCDF Dispatcher Alert Rendering & Confidence Verification</span>
-<span class="k">import</span> React, { useState, useEffect } <span class="k">from</span> <span class="s">'react'</span>;
-<span class="k">import</span> { AlertCard, CFRDispatcher } <span class="k">from</span> <span class="s">'@/components/emergency'</span>;
-
-<span class="k">export default function</span> <span class="v">IncomingAlerts</span>() {
-    <span class="k">const</span> [incidents, setIncidents] = <span class="v">useState</span>([]);
-
-    <span class="v">useEffect</span>(() => {
-        <span class="s">// Listen for edge-processed anomaly alerts</span>
-        <span class="k">const</span> alertStream = <span class="k">new</span> <span class="v">WebSocket</span>(<span class="s">'wss://api.echosync.sg/alerts'</span>);
-        
-        alertStream.<span class="v">onmessage</span> = (event) => {
-            <span class="k">const</span> data = JSON.<span class="v">parse</span>(event.data);
-            <span class="s">// Only surface High-Confidence alerts to reduce dispatcher fatigue</span>
-            <span class="k">if</span> (data.confidenceScore >= <span class="v">0.85</span> && data.type === <span class="s">'CRITICAL_MEDICAL'</span>) {
-                <span class="v">setIncidents</span>(prev => [data, ...prev]);
-            }
-        };
-        <span class="k">return</span> () => alertStream.<span class="v">close</span>();
-    }, []);
-
-    <span class="k">return</span> (
-        &lt;<span class="v">div</span> className=<span class="s">"incident-feed"</span>&gt;
-            {incidents.<span class="v">map</span>(incident => (
-                &lt;<span class="v">AlertCard</span> key={incident.id} data={incident}&gt;
-                    &lt;<span class="v">CFRDispatcher</span> location={incident.hdbUnit} /&gt;
-                &lt;/<span class="v">AlertCard</span>&gt;
-            ))}
-        &lt;/<span class="v">div</span>&gt;
-    );
-}</code></pre>
-                </div>
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">My Contributions</h2>
+                <p>
+                    My contributions included UI/UX design, React.js frontend development, dashboard integration, alert flow design, prototype testing, hardware demo support, and pitch preparation. I worked on translating raw sensor events into clear alert cards, risk levels, caregiver actions, dashboard evidence, and responder workflows.
+                </p>
+                <p>
+                    I also helped refine the final demo journey across the SCDF dashboard, caregiver application, myResponder-style flow, and hardware-triggered alert scenarios.
+                </p>
 
                 <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 50px; margin-bottom: 15px;">The EchoSync Ecosystem</h2>
                 <p style="margin-bottom: 30px; line-height: 1.6; color: var(--text-secondary);">
-                    EchoSync is designed as a software-first MVP, simulating the end-to-end workflow from anomaly detection to CFR activation. I utilized modern UI design patterns to ensure the dispatcher interfaces are intuitive during high-stress, time-critical scenarios.
+                    The final prototype demonstrates an end-to-end emergency response journey: sensor detection, Edge AI verification, caregiver verification, SCDF-style operator review, and myResponder-style escalation.
                 </p>
 
                 <div class="project-card" style="padding: 0; overflow: hidden; margin-bottom: 40px;">
-                    
                     <div class="window-bar" style="display: flex; align-items: center; justify-content: space-between;">
                         <div style="display: flex; align-items: center; gap: 15px;">
                             <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
-                            <div class="file-name" id="carousel-filename" style="margin: 0;">hero_landing.png</div>
+                            <div class="file-name" id="carousel-filename" style="margin: 0;">dashboard_overview.png</div>
                         </div>
 
                         <div style="display: flex; gap: 15px; margin-right: 5px;">
@@ -130,75 +131,84 @@
                     </div>
 
                     <div style="padding: 10px; background: #e2e8f0; position: relative;">
-                        
                         <div class="img-slide" style="display: block; animation: fadeIn 0.4s;">
-                            <img src="assets/echosync/hero_landing.png" alt="Public Landing Page" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
-                        </div>
-                        
-                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
-                            <img src="assets/echosync/mission_stats.png" alt="Mission and Stats" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
-                        </div>
-                        
-                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
-                            <img src="assets/echosync/tech_architecture.png" alt="Tech Architecture" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
+                            <img src="assets/echosync/dashboard_overview.png" alt="EchoSync SCDF Dashboard Overview" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
                         </div>
 
                         <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
-                            <img src="assets/echosync/pdpa_privacy.png" alt="PDPA Compliance" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
+                            <img src="assets/echosync/dashboard_critical_alert.png" alt="EchoSync Critical Alert Dashboard" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
                         </div>
 
                         <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
-                            <img src="assets/echosync/portal_login.png" alt="Secure Login" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
+                            <img src="assets/echosync/caregiver_home.png" alt="EchoSync Caregiver Home Screen" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
                         </div>
 
                         <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
-                            <img src="assets/echosync/echo_ai_assistant.png" alt="EchoAI Assistant" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
+                            <img src="assets/echosync/caregiver_ai_summary.png" alt="EchoSync Caregiver AI Alert Summary" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
                         </div>
 
-                          <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
-                            <img src="assets/echosync/dashboard.png" alt="EchoAI Assistant" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
+                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
+                            <img src="assets/echosync/myresponder_task.png" alt="EchoSync myResponder Task Screen" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
+                        </div>
+
+                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
+                            <img src="assets/echosync/caregiver_language_profile.png" alt="EchoSync Caregiver Language Profile" style="width: 100%; height: auto; display: block; border-radius: 4px; border: 1px solid #000;">
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <div>
+            <div class="echosync-sidebar">
                 <div class="project-card" style="padding: 25px;">
                     <h3 style="font-size: 1.1rem; margin-bottom: 15px;">Tech Stack</h3>
                     <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px;">
                         <span class="code-name">React.js</span>
                         <span class="code-name">Next.js</span>
                         <span class="code-name">TypeScript</span>
+                        <span class="code-name">Python</span>
+                        <span class="code-name">Raspberry Pi</span>
+                        <span class="code-name">Arduino</span>
+                        <span class="code-name">Edge AI</span>
+                        <span class="code-name">Azure Speech</span>
                         <span class="code-name">UI/UX Design</span>
-                        <span class="code-name">Figma</span>
-                        <span class="code-name">WebSockets</span>
+                        <span class="code-name">Vercel</span>
                     </div>
 
                     <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Role</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 25px;">Frontend Developer / UI Designer</p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 25px;">Frontend Developer / UI Designer / Prototype Integrator</p>
 
                     <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Status</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 25px; color: var(--text-secondary);">Actively prototyping the SCDF dispatcher dashboard and CFR routing interfaces for the May 2026 hackathon submission.</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 25px; color: var(--text-secondary);">Completed prototype. Top 5 Finalist in the SCDF and Dell Lifesavers’ Innovation Challenge 2026, selected out of 81 teams from 17 institutions.</p>
 
                     <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Links</h3>
 
                     <a href="https://canva.link/3jphq3scqtzqxrj" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box; background: #fff; color: #000">
-                        <i class="fas fa-file-powerpoint"></i> View BrainStorm 
+                        <i class="fas fa-file-powerpoint"></i> View Brainstorm
                     </a>
 
                     <a href="https://github.com/feliciatanxl/EchoSync" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box;">
-                        <i class="fab fa-github"></i> View MVP Repo
+                        <i class="fab fa-github"></i> View GitHub Repo
                     </a>
 
                     <a href="https://canva.link/1vbi4l7is7edmj3" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box">
-                        <i class="fas fa-file-powerpoint"></i> View Pitch Deck
+                        <i class="fas fa-file-powerpoint"></i> Top 10 Pitch Deck
                     </a>
 
-                    <a href="https://echosync-website-brown.vercel.app/" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box;">
-                        <i class="fas fa-external-link-alt"></i> View MVP
+                    <a href="https://canva.link/nsu4u5fb17wkt8w" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box">
+                        <i class="fas fa-file-powerpoint"></i> Grand Finale Deck
                     </a>
 
+                    <a href="https://echosync-portal-kaw8xrzjo-feliciatanxls-projects.vercel.app/dashboard-v2" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box;">
+                        <i class="fas fa-desktop"></i> View Dashboard
+                    </a>
+
+                    <a href="https://echosync-portal-kaw8xrzjo-feliciatanxls-projects.vercel.app/caregiver-app" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box;">
+                        <i class="fas fa-users"></i> View Caregiver App
+                    </a>
+
+                    <a href="https://echosync-portal-kaw8xrzjo-feliciatanxls-projects.vercel.app/myResponder" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box;">
+                        <i class="fas fa-mobile-alt"></i> View myResponder
+                    </a>
                 </div>
             </div>
 
@@ -229,13 +239,12 @@
         let autoSlideTimer;
 
         const fileNames = [
-            "hero_landing.png", 
-            "mission_stats.png", 
-            "tech_architecture.png",
-            "pdpa_privacy.png",
-            "portal_login.png",
-            "echo_ai_assistant.png",
-            "dashboard.png"
+            "dashboard_overview.png",
+            "dashboard_critical_alert.png",
+            "caregiver_home.png",
+            "caregiver_ai_summary.png",
+            "myresponder_task.png",
+            "caregiver_language_profile.png"
         ];
 
         function updateSlide() {
@@ -247,7 +256,7 @@
         function changeSlide(n) {
             slideIndex = (slideIndex + n + slides.length) % slides.length;
             updateSlide();
-            resetTimer(); 
+            resetTimer();
         }
 
         function autoSlide() {
@@ -257,10 +266,10 @@
 
         function resetTimer() {
             clearInterval(autoSlideTimer);
-            autoSlideTimer = setInterval(autoSlide, 3500); 
+            autoSlideTimer = setInterval(autoSlide, 3500);
         }
 
-        if(slides.length > 0) {
+        if (slides.length > 0) {
             resetTimer();
         }
     </script>
