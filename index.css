@@ -1414,3 +1414,68 @@ footer {
         margin-top: 15px;
     }
 }
+
+/* ==========================================================================
+   RESPONSIVE SAFETY OVERRIDES
+   ========================================================================== */
+@media (max-width: 850px) {
+    .section-title,
+    .file-name,
+    .window-body,
+    .window-body h3,
+    .window-body p {
+        overflow-wrap: anywhere;
+    }
+
+    .projects-grid > *,
+    .achievements-grid > *,
+    .about-grid > *,
+    .timeline-item,
+    .project-card,
+    .window-body,
+    .window-body > div,
+    header[style*="display: flex"] > div:first-child {
+        min-width: 0;
+    }
+
+    .project-card,
+    .window-body {
+        max-width: 100%;
+    }
+
+    .file-name {
+        min-width: 0;
+        overflow-wrap: anywhere;
+        text-align: right;
+    }
+
+    .dropdown:focus-within .dropdown-content,
+    .dropdown.touch-open .dropdown-content {
+        display: block;
+    }
+
+    header[style*="display: flex"] > div:first-child {
+        flex: 1 1 auto;
+    }
+
+    header[style*="display: flex"] > a {
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 800px) {
+    .img-slide img {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .terminal-btn,
+    .timeline-item .terminal-btn {
+        max-width: 100%;
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+    }
+}
