@@ -44,9 +44,78 @@
         });
     };
 
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initResponsiveNav);
-    } else {
+    const initScrollToTop = () => {
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+
+        if (!scrollToTopButton) return;
+
+        const navLinks = document.getElementById('nav-links');
+        const footer = document.querySelector('footer');
+        let updateScheduled = false;
+
+        const updateButton = () => {
+            updateScheduled = false;
+
+            const menuIsOpen = navLinks?.classList.contains('active') ?? false;
+            const shouldShow = window.scrollY >= 350 && !menuIsOpen;
+            const footerOverlap = footer
+                ? Math.max(0, window.innerHeight - footer.getBoundingClientRect().top)
+                : 0;
+
+            scrollToTopButton.classList.toggle('is-visible', shouldShow);
+            scrollToTopButton.setAttribute('aria-hidden', String(!shouldShow));
+            scrollToTopButton.tabIndex = shouldShow ? 0 : -1;
+            scrollToTopButton.style.setProperty(
+                '--scroll-to-top-footer-offset',
+                `${Math.round(footerOverlap)}px`
+            );
+        };
+
+        const scheduleUpdate = () => {
+            if (updateScheduled) return;
+
+            updateScheduled = true;
+            window.requestAnimationFrame(updateButton);
+        };
+
+        const scrollToPageTop = () => {
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: reducedMotion ? 'auto' : 'smooth'
+            });
+        };
+
+        scrollToTopButton.addEventListener('click', scrollToPageTop);
+
+        scrollToTopButton.addEventListener('keydown', (event) => {
+            if (event.key !== 'Enter' && event.key !== ' ') return;
+
+            event.preventDefault();
+            scrollToPageTop();
+        });
+
+        window.addEventListener('scroll', scheduleUpdate, { passive: true });
+        window.addEventListener('resize', scheduleUpdate, { passive: true });
+
+        if (navLinks) {
+            const menuObserver = new MutationObserver(scheduleUpdate);
+            menuObserver.observe(navLinks, { attributes: true, attributeFilter: ['class'] });
+        }
+
+        updateButton();
+    };
+
+    const init = () => {
         initResponsiveNav();
+        initScrollToTop();
+    };
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
     }
 })();

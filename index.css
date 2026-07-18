@@ -1479,3 +1479,69 @@ footer {
         overflow-wrap: anywhere;
     }
 }
+
+/* ==========================================================================
+   SCROLL TO TOP
+   ========================================================================== */
+.scroll-to-top {
+    position: fixed;
+    right: calc(24px + env(safe-area-inset-right, 0px));
+    bottom: calc(24px + env(safe-area-inset-bottom, 0px) + var(--scroll-to-top-footer-offset, 0px));
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: var(--border-width) solid #000;
+    background: #fff;
+    color: #000;
+    font: inherit;
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
+}
+
+.scroll-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+.scroll-to-top:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+@media (max-width: 850px) {
+    .scroll-to-top {
+        right: calc(20px + env(safe-area-inset-right, 0px));
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px) + var(--scroll-to-top-footer-offset, 0px));
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top {
+        right: calc(16px + env(safe-area-inset-right, 0px));
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px) + var(--scroll-to-top-footer-offset, 0px));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .scroll-to-top {
+        transition: none;
+    }
+}
