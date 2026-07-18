@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maker-Lab</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="index.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <style>
+        @media (max-width: 860px) {
+            .makerlab-layout {
+                display: block !important;
+            }
+
+            .makerlab-sidebar {
+                margin-top: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                'FT<span class="cursor-blink">_</span>'
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+
+                <li>
+                    <a href="me.html">About Me</a>
+                </li>
+
+                <li>
+                    <a href="experience.html">Experiences</a>
+                </li>
+
+                <li>
+                    <a
+                        href="projects.html"
+                        class="active"
+                        style="color: var(--accent);"
+                    >
+                        Projects
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" style="cursor: pointer;">
+                        Achievements
+
+                        <i
+                            class="fas fa-chevron-down"
+                            style="
+                                font-size: 0.7rem;
+                                margin-left: 4px;
+                                vertical-align: middle;
+                            "
+                        ></i>
+                    </a>
+
+                    <div class="dropdown-content">
+                        <a href="achievements.html">
+                            &gt;_ Project Milestones
+                        </a>
+
+                        <a href="awards.html">
+                            &gt;_ Academic Awards
+                        </a>
+
+                        <a href="certs.html">
+                            &gt;_ Tech Certifications
+                        </a>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="competitions.html">Competitions</a>
+                </li>
+
+                <li>
+                    <a href="index.html#contact" class="nav-btn">
+                        Contacts
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <main
+        class="container"
+        style="max-width: 900px; padding-bottom: 80px;"
+    >
+
+        <header
+            style="
+                margin-top: 50px;
+                margin-bottom: 60px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            "
+        >
+
+            <div>
+                <h1
+                    style="
+                        font-size: 3rem;
+                        font-weight: 800;
+                        margin-bottom: 10px;
+                        line-height: 1.1;
+                        margin-top: 0;
+                    "
+                >
+                    Maker-Lab
+                </h1>
+
+                <p
+                    style="
+                        font-size: 1.2rem;
+                        color: var(--text-secondary);
+                        font-family: 'Fira Code', monospace;
+                        margin: 0;
+                    "
+                >
+                    Embedded Systems &amp; Hardware Playground
+                </p>
+            </div>
+
+            <a
+                href="projects.html"
+                style="
+                    text-decoration: none;
+                    color: #000;
+                    font-family: 'Fira Code', monospace;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    background: #f8fafc;
+                    padding: 10px 18px;
+                    border-radius: 8px;
+                    border: 2px solid #000;
+                    box-shadow: 3px 3px 0px #000;
+                    transition: all 0.2s ease;
+                "
+                onmouseover="
+                    this.style.transform='translate(-2px, -2px)';
+                    this.style.boxShadow='5px 5px 0px var(--accent)';
+                "
+                onmouseout="
+                    this.style.transform='translate(0, 0)';
+                    this.style.boxShadow='3px 3px 0px #000';
+                "
+            >
+                cd ../projects
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </header>
+
+
+        <div
+            class="makerlab-layout"
+            style="
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 40px;
+            "
+        >
+
+            <div class="project-details">
+
+                <h2
+                    style="
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        margin-bottom: 15px;
+                    "
+                >
+                    Project Overview
+                </h2>
+
+                <p>
+                    Maker-Lab is my ongoing technical workspace for documenting
+                    Arduino, ESP32, Raspberry Pi, embedded-systems, IoT, and
+                    hardware-software experiments.
+                </p>
+
+                <p>
+                    Instead of keeping each prototype as an isolated folder,
+                    Maker-Lab brings my source code, development notes, hardware
+                    photographs, project demonstrations, and technical case
+                    studies together in one organised repository and website.
+                </p>
+
+
+                <h2
+                    style="
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        margin-top: 30px;
+                        margin-bottom: 15px;
+                    "
+                >
+                    Why I Created It
+                </h2>
+
+                <p>
+                    Electronics projects often involve more than just code.
+                    They include wiring, sensors, hardware testing, debugging,
+                    communication between devices, and the process of turning
+                    an idea into a working prototype.
+                </p>
+
+                <p>
+                    I created Maker-Lab to record that complete process while
+                    building a growing technical portfolio that can support
+                    future school projects, hackathons, competitions, and
+                    independent experiments.
+                </p>
+
+
+                <h2
+                    style="
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        margin-top: 30px;
+                        margin-bottom: 15px;
+                    "
+                >
+                    What Maker-Lab Covers
+                </h2>
+
+                <div
+                    class="code-snippet"
+                    style="
+                        background: #f8fafc;
+                        border-color: #000;
+                        color: #000;
+                        margin-bottom: 30px;
+                    "
+                >
+                    <ul
+                        style="
+                            list-style-type: none;
+                            padding-left: 0;
+                            margin: 0;
+                            font-family: 'Fira Code', monospace;
+                            font-size: 0.9rem;
+                        "
+                    >
+
+                        <li style="margin-bottom: 12px;">
+                            <span
+                                style="
+                                    color: var(--accent);
+                                    font-weight: 800;
+                                "
+                            >
+                                &gt;
+                            </span>
+
+                            <strong>Arduino:</strong>
+
+                            Sensor integration, breadboard prototyping, LEDs,
+                            LCD displays, buzzers, RFID, controls, and physical
+                            computing.
+                        </li>
+
+                        <li style="margin-bottom: 12px;">
+                            <span
+                                style="
+                                    color: var(--accent);
+                                    font-weight: 800;
+                                "
+                            >
+                                &gt;
+                            </span>
+
+                            <strong>ESP32:</strong>
+
+                            Wi-Fi, Bluetooth, TFT displays, IoT experiments,
+                            interactive desk gadgets, and connected devices.
+                        </li>
+
+                        <li style="margin-bottom: 12px;">
+                            <span
+                                style="
+                                    color: var(--accent);
+                                    font-weight: 800;
+                                "
+                            >
+                                &gt;
+                            </span>
+
+                            <strong>Raspberry Pi:</strong>
+
+                            Linux-based workflows, Python applications, audio,
+                            APIs, computer vision, edge processing, and device
+                            coordination.
+                        </li>
+
+                        <li style="margin-bottom: 12px;">
+                            <span
+                                style="
+                                    color: var(--accent);
+                                    font-weight: 800;
+                                "
+                            >
+                                &gt;
+                            </span>
+
+                            <strong>Embedded Systems:</strong>
+
+                            Serial communication, structured JSON, sensor
+                            fusion, hardware testing, and communication between
+                            microcontrollers and application software.
+                        </li>
+
+                        <li>
+                            <span
+                                style="
+                                    color: var(--accent);
+                                    font-weight: 800;
+                                "
+                            >
+                                &gt;
+                            </span>
+
+                            <strong>Project Documentation:</strong>
+
+                            Technical case studies, architecture diagrams,
+                            hardware photographs, source-code links, test
+                            results, and development lessons.
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <h2
+                    style="
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        margin-top: 30px;
+                        margin-bottom: 15px;
+                    "
+                >
+                    Current Projects
+                </h2>
+
+                <p>
+                    EchoSync is the first complete engineering case study
+                    documented inside Maker-Lab. It covers Arduino sensor
+                    integration, Raspberry Pi decision logic, serial JSON,
+                    multilingual voice confirmation, and the connection between
+                    physical hardware and a digital response platform.
+                </p>
+
+                <p>
+                    Future projects will include ESP32 display experiments,
+                    LED-matrix games, RFID systems, interactive sensor builds,
+                    and Raspberry Pi applications.
+                </p>
+
+
+                <h2
+                    style="
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        margin-top: 30px;
+                        margin-bottom: 15px;
+                    "
+                >
+                    Repository Organisation
+                </h2>
+
+                <div
+                    class="code-snippet"
+                    style="
+                        background: #111;
+                        color: #f8fafc;
+                        margin-bottom: 30px;
+                    "
+                >
+<pre style="margin: 0; overflow-x: auto;"><code>MakerLab/
+├── Arduino/
+├── ESP32/
+├── Raspberry-Pi/
+├── EchoSync/
+├── assets/
+│   ├── images/
+│   └── videos/
+├── projects/
+├── css/
+├── js/
+├── index.html
+└── README.md</code></pre>
+                </div>
+
+
+                <h2
+                    style="
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        margin-top: 30px;
+                        margin-bottom: 15px;
+                    "
+                >
+                    My Contributions
+                </h2>
+
+                <p>
+                    Maker-Lab is independently designed, developed, documented,
+                    and maintained by me. I created the website interface,
+                    organised the repository structure, wrote the technical
+                    project content, integrated the media, and configured the
+                    site for deployment through Vercel.
+                </p>
+
+                <p>
+                    I also use the platform to record what I learn while
+                    connecting hardware, software, APIs, serial communication,
+                    sensors, displays, and user-facing applications.
+                </p>
+
+
+                <h2
+                    style="
+                        font-size: 1.5rem;
+                        font-weight: 800;
+                        margin-top: 50px;
+                        margin-bottom: 15px;
+                    "
+                >
+                    The Maker-Lab Website
+                </h2>
+
+                <p
+                    style="
+                        margin-bottom: 30px;
+                        line-height: 1.6;
+                        color: var(--text-secondary);
+                    "
+                >
+                    The website uses a digital engineering-workbench theme to
+                    present each build through project summaries, architecture
+                    diagrams, hardware galleries, demonstrations, source links,
+                    results, and lessons learned.
+                </p>
+
+
+                <div
+                    class="project-card"
+                    style="
+                        padding: 0;
+                        overflow: hidden;
+                        margin-bottom: 40px;
+                    "
+                >
+
+                    <div
+                        class="window-bar"
+                        style="
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        "
+                    >
+
+                        <div
+                            style="
+                                display: flex;
+                                align-items: center;
+                                gap: 15px;
+                            "
+                        >
+                            <div class="dots">
+                                <span class="red"></span>
+                                <span class="yellow"></span>
+                                <span class="green"></span>
+                            </div>
+
+                            <div
+                                class="file-name"
+                                id="carousel-filename"
+                                style="margin: 0;"
+                            >
+                                makerlab_home.png
+                            </div>
+                        </div>
+
+                        <div
+                            style="
+                                display: flex;
+                                gap: 15px;
+                                margin-right: 5px;
+                            "
+                        >
+
+                            <button
+                                type="button"
+                                onclick="changeSlide(-1)"
+                                aria-label="Show previous Maker-Lab screenshot"
+                                style="
+                                    background: none;
+                                    border: none;
+                                    cursor: pointer;
+                                    font-family: 'Fira Code', monospace;
+                                    font-weight: 800;
+                                    font-size: 1.1rem;
+                                    padding: 5px;
+                                    color: #000;
+                                "
+                            >
+                                &lt;
+                            </button>
+
+                            <button
+                                type="button"
+                                onclick="changeSlide(1)"
+                                aria-label="Show next Maker-Lab screenshot"
+                                style="
+                                    background: none;
+                                    border: none;
+                                    cursor: pointer;
+                                    font-family: 'Fira Code', monospace;
+                                    font-weight: 800;
+                                    font-size: 1.1rem;
+                                    padding: 5px;
+                                    color: #000;
+                                "
+                            >
+                                &gt;
+                            </button>
+
+                        </div>
+                    </div>
+
+
+                    <div
+                        style="
+                            padding: 10px;
+                            background: #e2e8f0;
+                            position: relative;
+                        "
+                    >
+
+                        <div
+                            class="img-slide"
+                            style="
+                                display: block;
+                                animation: fadeIn 0.4s;
+                            "
+                        >
+                            <img
+                                src="assets/makerlab/makerlab_home.png"
+                                alt="Maker-Lab website homepage"
+                                style="
+                                    width: 100%;
+                                    height: auto;
+                                    display: block;
+                                    border-radius: 4px;
+                                    border: 1px solid #000;
+                                "
+                            >
+                        </div>
+
+
+                        <div
+                            class="img-slide"
+                            style="
+                                display: none;
+                                animation: fadeIn 0.4s;
+                            "
+                        >
+                            <img
+                                src="assets/makerlab/makerlab_projects.png"
+                                alt="Maker-Lab project collection section"
+                                style="
+                                    width: 100%;
+                                    height: auto;
+                                    display: block;
+                                    border-radius: 4px;
+                                    border: 1px solid #000;
+                                "
+                            >
+                        </div>
+
+
+                        <div
+                            class="img-slide"
+                            style="
+                                display: none;
+                                animation: fadeIn 0.4s;
+                            "
+                        >
+                            <img
+                                src="assets/makerlab/makerlab_echosync.png"
+                                alt="EchoSync technical engineering case study on Maker-Lab"
+                                style="
+                                    width: 100%;
+                                    height: auto;
+                                    display: block;
+                                    border-radius: 4px;
+                                    border: 1px solid #000;
+                                "
+                            >
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <aside class="makerlab-sidebar">
+
+                <div
+                    class="project-card"
+                    style="padding: 25px;"
+                >
+
+                    <h3
+                        style="
+                            font-size: 1.1rem;
+                            margin-bottom: 15px;
+                        "
+                    >
+                        Tech Stack
+                    </h3>
+
+                    <div
+                        style="
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 8px;
+                            margin-bottom: 25px;
+                        "
+                    >
+
+                        <span class="code-name">HTML</span>
+                        <span class="code-name">CSS</span>
+                        <span class="code-name">JavaScript</span>
+                        <span class="code-name">Arduino</span>
+                        <span class="code-name">ESP32</span>
+                        <span class="code-name">Raspberry Pi</span>
+                        <span class="code-name">C/C++</span>
+                        <span class="code-name">Python</span>
+                        <span class="code-name">Serial JSON</span>
+                        <span class="code-name">IoT</span>
+                        <span class="code-name">GitHub</span>
+                        <span class="code-name">Vercel</span>
+
+                    </div>
+
+
+                    <h3
+                        style="
+                            font-size: 1.1rem;
+                            margin-bottom: 10px;
+                        "
+                    >
+                        Role
+                    </h3>
+
+                    <p
+                        style="
+                            font-size: 0.9rem;
+                            color: var(--text-secondary);
+                            margin-bottom: 25px;
+                        "
+                    >
+                        Creator / Developer / Hardware Experimenter
+                    </p>
+
+
+                    <h3
+                        style="
+                            font-size: 1.1rem;
+                            margin-bottom: 10px;
+                        "
+                    >
+                        Status
+                    </h3>
+
+                    <p
+                        style="
+                            font-size: 0.85rem;
+                            margin-bottom: 25px;
+                            color: var(--text-secondary);
+                        "
+                    >
+                        Ongoing technical lab started in July 2026. New Arduino,
+                        ESP32, Raspberry Pi, embedded-systems, and IoT projects
+                        will continue to be added.
+                    </p>
+
+
+                    <h3
+                        style="
+                            font-size: 1.1rem;
+                            margin-bottom: 10px;
+                        "
+                    >
+                        Links
+                    </h3>
+
+
+                    <a
+                        href="https://maker-lab-three.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="terminal-btn"
+                        style="
+                            width: 100%;
+                            justify-content: center;
+                            box-sizing: border-box;
+                        "
+                    >
+                        <i class="fas fa-microchip"></i>
+                        Explore Maker-Lab
+                    </a>
+
+
+                    <a
+                        href="https://github.com/feliciatanxl/MakerLab"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="terminal-btn"
+                        style="
+                            width: 100%;
+                            justify-content: center;
+                            box-sizing: border-box;
+                        "
+                    >
+                        <i class="fab fa-github"></i>
+                        View GitHub Repo
+                </a>
+
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 Felicia Tan. Handcrafted with &lt;code /&gt;
+        </p>
+    </footer>
+
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            const icon = menuToggle.querySelector("i");
+
+            if (isOpen) {
+                icon.classList.replace("fa-bars", "fa-times");
+            } else {
+                icon.classList.replace("fa-times", "fa-bars");
+            }
+        });
+
+
+        let slideIndex = 0;
+
+        const slides = document.querySelectorAll(".img-slide");
+        const filenameDisplay =
+            document.getElementById("carousel-filename");
+
+        let autoSlideTimer;
+
+
+        const fileNames = [
+            "makerlab_home.png",
+            "makerlab_projects.png",
+            "makerlab_echosync.png"
+        ];
+
+
+        function updateSlide() {
+            slides.forEach((slide) => {
+                slide.style.display = "none";
+            });
+
+            slides[slideIndex].style.display = "block";
+
+            filenameDisplay.innerText =
+                fileNames[slideIndex];
+        }
+
+
+        function changeSlide(direction) {
+            slideIndex =
+                (slideIndex + direction + slides.length)
+                % slides.length;
+
+            updateSlide();
+            resetTimer();
+        }
+
+
+        function autoSlide() {
+            slideIndex =
+                (slideIndex + 1) % slides.length;
+
+            updateSlide();
+        }
+
+
+        function resetTimer() {
+            clearInterval(autoSlideTimer);
+
+            autoSlideTimer =
+                setInterval(autoSlide, 3500);
+        }
+
+
+        if (slides.length > 0) {
+            resetTimer();
+        }
+    </script>
+
+
+    <button
+        type="button"
+        class="scroll-to-top"
+        id="scroll-to-top"
+        aria-label="Scroll to top"
+        title="Scroll to top"
+        aria-hidden="true"
+        tabindex="-1"
+    >
+        <span aria-hidden="true">&#8593;</span>
+    </button>
+
+
+    <script src="responsive-nav.js"></script>
+
+</body>
+</html>
