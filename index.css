@@ -637,6 +637,51 @@ footer {
     flex-direction: column;
 }
 
+.walkthrough-video-card {
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.walkthrough-video-frame,
+.walkthrough-embed {
+    padding: 10px;
+    background: #e2e8f0;
+    box-sizing: border-box;
+}
+
+.walkthrough-video-frame video,
+.walkthrough-embed iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #111;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.walkthrough-video-card .window-bar {
+    min-width: 0;
+}
+
+.walkthrough-video-card .dots {
+    flex: 0 0 auto;
+}
+
+.walkthrough-video-card .file-name {
+    flex: 1 1 0;
+    width: 0;
+    min-width: 0;
+    margin-left: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    white-space: nowrap;
+}
+
     .window-body h3 {
         margin: 0 0 10px 0;
         font-size: 1.4rem;

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwapLah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../../assets/logo.png">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../" class="logo">'FT<span class="cursor-blink">_</span>'</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../../me/">About Me</a></li>
+                <li><a href="../../experience/">Experiences</a></li>
+                
+                <li><a href="../" class="active" style="color: var(--accent);">Projects</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" style="cursor: pointer;">Achievements <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../../achievements/">>_ Project Milestones</a>
+                        <a href="../../awards/">>_ Academic Awards</a>
+                        <a href="../../certs/">>_ Tech Certifications</a>
+                    </div>
+                </li>
+
+                <li><a href="../../competitions/">Competitions</a></li>
+                <li><a href="../../#contact" class="nav-btn">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" style="max-width: 900px; padding-bottom: 80px;">
+
+        <header style="margin-top: 50px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div>
+                <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 10px; line-height: 1.1; margin-top: 0;">SwapLah</h1>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); font-family: 'Fira Code', monospace; margin: 0;">Student Co-op Marketplace & CI/CD Pipeline</p>
+            </div>
+
+            <a href="../" style="text-decoration: none; color: #000; font-family: 'Fira Code', monospace; font-size: 0.9rem; font-weight: 600; background: #f8fafc; padding: 10px 18px; border-radius: 8px; border: 2px solid #000; box-shadow: 3px 3px 0px #000; transition: all 0.2s ease;" onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='5px 5px 0px var(--accent)';" onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='3px 3px 0px #000';">
+                cd ../projects <i class="fas fa-arrow-right"></i>
+            </a>
+        </header>
+
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
+
+            <div class="project-details">
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 15px;">The Problem</h2>
+                <p>Polytechnic students lack a dedicated, secure platform to safely trade pre-owned campus essentials like textbooks, lab equipment, and electronics. Existing public marketplaces carry risks of scams and lack campus-specific trust mechanisms.</p>
+                <p>From a software engineering perspective, the core challenge of this academic project was to build the marketplace strictly adhering to <strong>Agile and industry-standard DevOps methodologies</strong>—moving beyond basic coding to enforce rigorous version control, automated testing, and security compliance.</p>
+
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">The Solution & Team Dynamics</h2>
+                <p style="margin-bottom: 30px; line-height: 1.6; color: var(--text-secondary);">
+                    Working within a collaborative Agile development team, we engineered a full-stack solution. The platform is powered by a <strong>Python Flask REST API</strong> and an SQLite database, featuring strict NYP-student email authentication, soft-delete item listings, offer negotiations, and a review system. Because our backend codebase is secured in a private academic GitLab repository, this case study highlights the user interface and my specific technical contributions to the sprint cycles.
+                </p>
+
+                <div class="project-card" style="padding: 0; overflow: hidden; margin-top: 35px; margin-bottom: 25px;">
+
+                    <div class="window-bar" style="display: flex; align-items: center; justify-content: space-between;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                            <div class="file-name" id="carousel-filename" style="margin: 0;">1_website_home.png</div>
+                        </div>
+
+                        <div style="display: flex; gap: 15px; margin-right: 5px;">
+                            <button onclick="changeSlide(-1)" style="background: none; border: none; cursor: pointer; font-family: 'Fira Code', monospace; font-weight: 800; font-size: 1.1rem; padding: 0; color: #000;">&lt;</button>
+                            <button onclick="changeSlide(1)" style="background: none; border: none; cursor: pointer; font-family: 'Fira Code', monospace; font-weight: 800; font-size: 1.1rem; padding: 0; color: #000;">&gt;</button>
+                        </div>
+                    </div>
+
+                    <div style="padding: 10px; background: #e2e8f0; position: relative;">
+
+                        <div class="img-slide" style="display: block; animation: fadeIn 0.4s;">
+                            <div style="width: 100%; height: 350px; background: #cbd5e1; display: flex; align-items: center; justify-content: center; border-radius: 4px; border: 1px solid #000; font-family: 'Fira Code', monospace; color: #64748b;">[ App Screenshot 1 ]</div>
+                        </div>
+                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
+                            <div style="width: 100%; height: 350px; background: #cbd5e1; display: flex; align-items: center; justify-content: center; border-radius: 4px; border: 1px solid #000; font-family: 'Fira Code', monospace; color: #64748b;">[ App Screenshot 2 ]</div>
+                        </div>
+                        <div class="img-slide" style="display: none; animation: fadeIn 0.4s;">
+                            <div style="width: 100%; height: 350px; background: #cbd5e1; display: flex; align-items: center; justify-content: center; border-radius: 4px; border: 1px solid #000; font-family: 'Fira Code', monospace; color: #64748b;">[ CI/CD Pipeline Screenshot ]</div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">My Key Contributions</h2>
+                <ul style="color: var(--text-secondary); line-height: 1.6; padding-left: 20px; margin-bottom: 30px;">
+                    <li style="margin-bottom: 10px;"><strong>AI-Assisted Development:</strong> Leveraged AI coding tools for rapid frontend prototyping, demonstrating modern prompt engineering and rigorous code-review practices.</li>
+                    <li style="margin-bottom: 10px;"><strong>Automated Testing:</strong> Developed comprehensive Unit and UI test scripts using Selenium to ensure 60%+ code coverage prior to merge requests.</li>
+                    <li style="margin-bottom: 10px;"><strong>Pipeline Integration:</strong> Collaborated on configuring the `.gitlab-ci.yml` pipeline to enforce automated linting, testing, and SAST security scans.</li>
+                </ul>
+
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">REST API Snippet</h2>
+                <div class="code-snippet">
+<pre><code><span class="s"># REST Endpoint: Create Marketplace Listing</span>
+<span class="k">@app.route</span>(<span class="s">'/api/listings'</span>, methods=[<span class="s">'POST'</span>])
+<span class="k">@require_auth</span>
+<span class="k">def</span> <span class="v">create_listing</span>():
+    data = request.get_json()
+    
+    <span class="k">if not</span> all(k <span class="k">in</span> data <span class="k">for</span> k <span class="k">in</span> (<span class="s">'title'</span>, <span class="s">'price'</span>, <span class="s">'category'</span>, <span class="s">'condition'</span>)):
+        <span class="k">return</span> jsonify({<span class="s">"error"</span>: <span class="s">"Missing required fields"</span>}), <span class="v">400</span>
+
+    new_listing = Listing(
+        id=<span class="v">str</span>(uuid.uuid4()),
+        seller_id=current_user.id,
+        title=data[<span class="s">'title'</span>],
+        price=data[<span class="s">'price'</span>],
+        category=data[<span class="s">'category'</span>]
+    )
+    
+    db.session.add(new_listing)
+    db.session.commit()
+
+    <span class="k">return</span> jsonify({<span class="s">"status"</span>: <span class="s">"success"</span>, <span class="s">"id"</span>: new_listing.id}), <span class="v">201</span></code></pre>
+                </div>
+            </div>
+
+            <div>
+                <div class="project-card" style="padding: 25px;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 15px;">Tech Stack</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px;">
+                        <span class="code-name">Python Flask</span>
+                        <span class="code-name">SQLite</span>
+                        <span class="code-name">GitLab CI/CD</span>
+                        <span class="code-name">AI Code Gen</span>
+                        <span class="code-name">Selenium</span>
+                        <span class="code-name">REST API</span>
+                        <span class="code-name">Bootstrap 5</span>
+                    </div>
+
+                    <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Role</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 25px;">Full-Stack Engineer</p>
+
+                    <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Timeline</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 25px;">Apr 2026 - Present</p>
+
+                    <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Links</h3>
+
+                    <a href="https://github.com/feliciatanxl/SwapLah" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box;">
+                        <i class="fab fa-github"></i> View GitHub Repo
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Felicia Tan. Handcrafted with &lt;code /&gt;</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".img-slide");
+        const filenameDisplay = document.getElementById("carousel-filename");
+        let autoSlideTimer;
+
+        const fileNames = [
+            "1_website_home.png", 
+            "2_marketplace_ui.png", 
+            "3_automated_testing.png"
+        ];
+
+        function updateSlide() {
+            slides.forEach(slide => slide.style.display = "none");
+            
+            slides[slideIndex].style.display = "block";
+            filenameDisplay.innerText = fileNames[slideIndex];
+        }
+
+        function changeSlide(n) {
+            slideIndex = (slideIndex + n + slides.length) % slides.length;
+            updateSlide();
+            resetTimer(); 
+        }
+
+        function autoSlide() {
+            slideIndex = (slideIndex + 1) % slides.length;
+            updateSlide();
+        }
+
+        function resetTimer() {
+            clearInterval(autoSlideTimer);
+            autoSlideTimer = setInterval(autoSlide, 3500);
+
+        if(slides.length > 0) {
+            resetTimer();
+        }
+    }
+    </script>
+    <button type="button" class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top" title="Scroll to top" aria-hidden="true" tabindex="-1"><span aria-hidden="true">&#8593;</span></button>
+    <script src="../../responsive-nav.js"></script>
+</body>
+</html>

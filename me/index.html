@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="logo">'FT<span class="cursor-blink">_</span>'</a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../me/" class="active" style="color: var(--accent);">About Me</a></li>
+                
+                <li><a href="../experience/">Experiences</a></li>
+                <li><a href="../projects/">Projects</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" style="cursor: pointer;">Achievements <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../achievements/">>_ Project Milestones</a>
+                        <a href="../awards/">>_ Academic Awards</a>
+                        <a href="../certs/">>_ Tech Certifications</a>
+                    </div>
+                </li>
+
+                <li><a href="../competitions/">Competitions</a></li>
+                <li><a href="../#contact" class="nav-btn">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <header class="section-header" style="text-align: center; margin-top: 60px; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <h1 class="section-title">Who I <span>./am</span></h1>
+            <p class="contact-text" style="font-size: 1.1rem; color: #4b5563; margin-bottom: 20px;">
+                I'm an introvert who loves staying home to game, listen to music for hours, and watch dramas.
+                I'm also a <span style="color: var(--accent); font-weight: 800;">hardworking person</span> who is always willing to learn new things.
+            </p>
+
+            <div class="tech-stack" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <span style="border: 1px solid #000; padding: 4px 12px; font-size: 0.85rem; border-radius: 6px; background: #f3f4f6; font-family: 'Fira Code', monospace; font-weight: 600;">HTML</span>
+                <span style="border: 1px solid #000; padding: 4px 12px; font-size: 0.85rem; border-radius: 6px; background: #f3f4f6; font-family: 'Fira Code', monospace; font-weight: 600;">CSS</span>
+                <span style="border: 1px solid #000; padding: 4px 12px; font-size: 0.85rem; border-radius: 6px; background: #f3f4f6; font-family: 'Fira Code', monospace; font-weight: 600;">Wordpress</span>
+                <span style="border: 1px solid #000; padding: 4px 12px; font-size: 0.85rem; border-radius: 6px; background: #f3f4f6; font-family: 'Fira Code', monospace; font-weight: 600;">Canva</span>
+                <span style="border: 1px solid #000; padding: 4px 12px; font-size: 0.85rem; border-radius: 6px; background: #f3f4f6; font-family: 'Fira Code', monospace; font-weight: 600;">Figma</span>
+            </div>
+        </header>
+
+        <div class="project-card motto-window">
+            <div class="window-bar">
+                <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                <div class="file-name">philosophy.sh</div>
+            </div>
+            <div class="window-body motto-body">
+                <p class="command-line"><span class="prompt">$</span> cat motivation.txt</p>
+                <h2 class="motto-display">JUST DO <span>IT.</span></h2>
+                <p class="motto-credit">// TM & © Nike, Inc. All Rights Reserved.</p>
+            </div>
+        </div>
+
+        <section class="projects-grid about-grid">
+
+            <div class="project-card">
+                <div class="window-bar">
+                    <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                    <div class="file-name">hobbies.json</div>
+                </div>
+                <div class="window-body">
+                    <div class="project-info">
+                        <h3 style="margin-bottom: 25px;">Things I Like</h3>
+
+                        <div class="hobby-stack">
+
+                            <div class="hobby-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-feather-alt"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Badminton</h4>
+                                    <span class="tag">type: "Agile & Competitive"</span>
+                                </div>
+                            </div>
+
+                            <div class="hobby-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-guitar"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Guitar</h4>
+                                    <span class="tag">type: "Acoustic Vibes"</span>
+                                </div>
+                            </div>
+
+                            <div class="hobby-card">
+                                <div class="card-icon">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <div class="card-content">
+                                    <h4>Gaming</h4>
+                                    <span class="tag">type: "Open-world Strategy"</span>
+                                </div>
+                            </div>
+
+                             <a href="https://felthebest.notion.site/Fel-s-Show-Drama-List-4c5e0e52eefa441f9c4db2dfc02e6521" target="_blank" rel="noopener noreferrer" class="hobby-link">
+                                <div class="hobby-card">
+                                    <div class="card-icon">
+                                        <i class="fas fa-film"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h4>Show/Drama</h4>
+                                        <span class="tag">type: "Romance Drama"</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           <div class="project-card">
+                <div class="window-bar">
+                    <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                    <div class="file-name">vibe_check.exe</div>
+                </div>
+                <div class="window-body" style="padding: 0; background: #121212; overflow: hidden; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; height: 100%;">
+                    <iframe src="https://open.spotify.com/embed/playlist/0KACHX8Vv0sXMJP3zid9D4?utm_source=generator&theme=0" width="100%" height="100%" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" style="border-radius: 0px; display: block; min-height: 352px;"></iframe>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Felicia Tan. Handcrafted with &lt;code /&gt;</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            // Switch icon between 'Bars' and 'X'
+            const icon = menuToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    </script>
+
+    <button type="button" class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top" title="Scroll to top" aria-hidden="true" tabindex="-1"><span aria-hidden="true">&#8593;</span></button>
+    <script src="../responsive-nav.js"></script>
+</body>
+</html>

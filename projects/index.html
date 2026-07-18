@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../assets/logo.png">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../" class="logo">'FT<span class="cursor-blink">_</span>'</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../me/">About Me</a></li>
+                <li><a href="../experience/">Experiences</a></li>
+                
+                <li><a href="../projects/" class="active" style="color: var(--accent);">Projects</a></li>
+                
+                <li class="dropdown">
+                    <a href="#" style="cursor: pointer;">Achievements <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px; vertical-align: middle;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../achievements/">>_ Project Milestones</a>
+                        <a href="../awards/">>_ Academic Awards</a>
+                        <a href="../certs/">>_ Tech Certifications</a>
+                    </div>
+                </li>
+
+                <li><a href="../competitions/">Competitions</a></li>
+                <li><a href="../#contact" class="nav-btn">Contacts</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="section-header" style="text-align: center; margin-top: 60px; margin-bottom: 60px;">
+            <h1 class="section-title">Projects <span>./bin</span></h1>
+            <p class="contact-text">A collection of technical deployments and creative builds.</p>
+        </header>
+
+        <section class="timeline-container">
+            <!-- Maker-Lab -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Jun 2026 - Present</div>
+
+                <div class="project-card" style="margin-bottom: 30px;">
+                    <div class="window-bar">
+                        <div class="dots">
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
+                        </div>
+                        <div class="file-name">maker_lab.dev</div>
+                    </div>
+
+                    <div class="window-body">
+                        <h3 style="margin-bottom: 10px;">Maker-Lab</h3>
+
+                        <p style="color: var(--text-secondary); line-height: 1.5; margin-bottom: 25px;">
+                            An ongoing technical workspace documenting my Arduino, ESP32,
+                            Raspberry Pi, embedded systems, and hardware-software experiments.
+                            Maker-Lab brings together working prototypes, technical case studies,
+                            source code, testing notes, and project demonstrations.
+                        </p>
+
+                        <div class="dual-pitch-grid">
+                            <div style="color: #000; font-weight: 800;">
+                                &gt;_ Hardware &amp; Embedded Systems
+                            </div>
+
+                            <div style="color: var(--text-secondary); margin-bottom: 10px;">
+                                Exploring microcontrollers, sensors, displays, serial communication,
+                                IoT workflows, and physical computing through practical hands-on
+                                builds.
+                            </div>
+
+                            <div style="color: #000; font-weight: 800;">
+                                &gt;_ Ongoing Development
+                            </div>
+
+                            <div style="color: var(--text-secondary);">
+                                Currently includes the EchoSync technical hardware case study,
+                                with more Arduino, ESP32, Raspberry Pi, and interactive electronics
+                                projects being added over time.
+                            </div>
+                        </div>
+
+                        <a href="makerlab/" class="terminal-btn">
+                            View Maker-Lab
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-line"></div>
+
+             <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Apr 2026 - Present</div>
+                <div class="project-card" style="margin-bottom: 30px;">
+                    <div class="window-bar">
+                        <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                        <div class="file-name">telegram_bot</div>
+                    </div>
+                    <div class="window-body">
+                        <h3>KiasuCode</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.5; margin-bottom: 20px;">
+                            KiasuCode is a production-grade GPA tracking bot built with Node.js, TypeScript, and MySQL, featuring a unique Singlish-developer persona powered by custom middleware. Developed via an AI-assisted workflow, the project demonstrates technical maturity by combining rapid AI prototyping with manually engineered architectural integrity and type safety.
+                        </p>
+                        <a href="kiasucode/" class="terminal-btn">
+                            <span class="prompt">/</span>start kiasucode
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card" style="margin-bottom: 30px;">
+                    <div class="window-bar">
+                        <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                        <div class="file-name">flowguard.js</div>
+                    </div>
+                    <div class="window-body">
+                        <h3>FlowGuard</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.5; margin-bottom: 20px;">
+                            Led the UI/UX design and frontend development for an AI-powered facility monitoring dashboard at the Harrison Food Factory. The core challenge was translating complex backend IoT and CCTV data—such as PPE compliance alerts and license plate recognition—into a clean, intuitive interface. The resulting dashboard was designed for quick decision-making to help reduce security man-hours by 50%.
+                        </p>
+                        <a href="flowguard/" class="terminal-btn">
+                            <span class="prompt">$</span> init --project flowguard
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="window-bar">
+                        <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                        <div class="file-name">swaplah_app.py</div>
+                    </div>
+                    <div class="window-body">
+                        <h3>SwapLah Marketplace</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.5; margin-bottom: 20px;">
+                            A full-stack student co-op marketplace allowing polytechnic students to securely buy, sell, and swap pre-owned campus essentials. Built with a Python Flask REST API and SQLite, this project heavily emphasizes Agile DevOps practices, featuring a strict GitLab CI/CD pipeline, automated unit/UI testing, and integrated SAST security scanning.
+                        </p>
+                        <a href="swaplah/" class="terminal-btn">
+                            <span class="prompt">$</span> run --app swaplah
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">Mar 2026 - Jul 2026</div>
+            
+            <div class="project-card" style="margin-bottom: 30px;">
+            <div class="window-bar">
+                <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                <div class="file-name">echosync_ui.jsx</div>
+            </div>
+            <div class="window-body">
+                
+                <h3 style="margin-bottom: 10px;">EchoSync</h3>
+                <p style="color: var(--text-secondary); line-height: 1.5; margin-bottom: 25px;">
+                    A privacy-first, AI-assisted pre-arrival emergency intelligence system for seniors living alone. EchoSync detects possible home emergencies using sensor signals, verifies real distress through Edge AI and voice check-in, then routes alerts to caregivers, SCDF-style operators, or a myResponder-style response flow based on severity.
+                </p>
+                            
+                <div class="dual-pitch-grid">
+                                
+                    <div style="color: #000; font-weight: 800;">>_ SCDF x Dell Challenge</div>
+                    <div style="color: var(--text-secondary); margin-bottom: 10px;">
+                        Selected as a Top 5 Finalist out of 81 teams from 17 institutions. Built a connected prototype with a SCDF-style dashboard, caregiver verification app, myResponder-style flow, and sensor-based emergency detection.
+                    </div>
+
+                    <div style="color: #000; font-weight: 800;">>_ NTU Pinnacle Prize</div>
+                    <div style="color: var(--text-secondary);">
+                        Optimized the user interface for Smart City elderly care and non-invasive health monitoring, focusing on privacy-first detection, explainable alerts, and safer community response.
+                    </div>
+                                
+                </div>
+
+                <a href="echosync/" class="terminal-btn">View Details</a>
+            </div>
+        </div>
+
+            <!-- <div class="project-card">
+                <div class="window-bar">
+                    <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                    <div class="file-name">focus_flow.dart</div>
+                </div>
+                <div class="window-body">
+                    
+                    <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                        <span class="status-tag" style="background: #e0e7ff; color: #4338ca; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: 800; font-family: 'Fira Code', monospace;">Sandbox</span>
+                    </div>
+                    
+                    <h3 style="margin-bottom: 10px;">Focus Flow</h3>
+                    <p style="color: var(--text-secondary); line-height: 1.5; margin-bottom: 20px;">Cross-platform productivity mobile app built with Flutter and Dart. Features custom Lottie animations, complete FTUE onboarding, secure authentication routing, and dynamic state management.</p>
+                    
+                    <a href="focusflow/" class="terminal-btn">
+                        <span class="prompt">$</span> run flutter --app
+                    </a>
+                </div>
+            </div> -->
+        </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Oct 2025 - Feb 2026</div>
+                <div class="project-card">
+                    <div class="window-bar">
+                        <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                        <div class="file-name">whatsapp_bot.py</div>
+                    </div>
+                    <div class="window-body">
+                        <!-- <span class="status-tag success">Active</span> -->
+                        <h3>Leaf Plant</h3>
+                        <p>Automated outreach for AgriTech SME using AI customer segmentation and Python Flask.</p>
+                        <a href="leafplant/" class="terminal-btn">
+                            <span class="prompt">$</span> git log --view
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Apr 2025 - Aug 2025</div>
+
+                <div style="display: flex; flex-direction: column; gap: 40px;">
+
+                    <div class="project-card">
+                        <div class="window-bar">
+                            <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                            <div class="file-name">index.html</div>
+                        </div>
+                        <div class="window-body">
+                            <h3>Titans Badminton Website</h3>
+                            <p>Responsive school CCA portal built with Bootstrap 5 and UX-driven navigation.</p>
+                            <a href="titans/" class="terminal-btn">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="window-bar">
+                            <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                            <div class="file-name">nirvana_cx.fig</div>
+                        </div>
+                        <div class="window-body">
+                            <h3>Nirvana Mobile</h3>
+                            <p>CX Transformation Plan using Design Thinking to improve user retention via wireframing.</p>
+                            <a href="nirvana/" class="terminal-btn">View Wireframe</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Oct 2024 - Dec 2024</div>
+                <div class="project-card">
+                    <div class="window-bar">
+                        <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                        <div class="file-name">main.dart</div>
+                    </div>
+                    <div class="window-body">
+                        <h3>Food Diary App</h3>
+                        <p>Cross-platform mobile application with SQLite persistence and health tracking tools.</p>
+                        <a href="fooddiary/" class="terminal-btn">Read Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">July 2024 - Sep 2024</div>
+                <div class="project-card">
+                    <div class="window-bar">
+                        <div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+                        <div class="file-name">meijiri.fig</div>
+                    </div>
+                    <div class="window-body">
+                        <h3>Meijiri Application</h3>
+                        <p>F&B self-ordering kiosk prototype designed to solve local manpower shortages.</p>
+                        <a href="meijiri/" class="terminal-btn">View Prototype</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Felicia Tan. Handcrafted with &lt;code /&gt;</p>
+    </footer>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            // Switch icon between 'Bars' and 'X'
+            const icon = menuToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    </script>
+
+    <button type="button" class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top" title="Scroll to top" aria-hidden="true" tabindex="-1"><span aria-hidden="true">&#8593;</span></button>
+    <script src="../responsive-nav.js"></script>
+</body>
+</html>

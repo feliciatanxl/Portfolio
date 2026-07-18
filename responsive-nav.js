@@ -108,7 +108,19 @@
         updateButton();
     };
 
+    const normalizeCleanUrl = () => {
+        const indexSuffix = '/index.html';
+
+        if (!window.location.pathname.endsWith(indexSuffix)) return;
+
+        const cleanPath = window.location.pathname.slice(0, -'index.html'.length);
+        window.location.replace(
+            `${cleanPath}${window.location.search}${window.location.hash}`
+        );
+    };
+
     const init = () => {
+        normalizeCleanUrl();
         initResponsiveNav();
         initScrollToTop();
     };
