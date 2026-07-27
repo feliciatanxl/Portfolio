@@ -75,11 +75,75 @@
         <section id="skills" class="section">
             <h2 class="section-title">Technical <span>Stack</span></h2>
             <div class="skills-grid">
-               <div class="skill-box"><i class="fab fa-html5"></i><span>HTML</span></div>
-                <div class="skill-box"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-                <div class="skill-box"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
-                <div class="skill-box"><i class="fas fa-palette"></i><span>Canva</span></div>
-                <div class="skill-box"><i class="fab fa-figma"></i><span>Figma</span></div>
+                <div class="skill-box"><i class="fab fa-python" aria-hidden="true"></i><span>Python</span></div>
+                <div class="skill-box"><i class="fab fa-react" aria-hidden="true"></i><span>React</span></div>
+                <div class="skill-box"><i class="fab fa-node-js" aria-hidden="true"></i><span>Node.js</span></div>
+                <div class="skill-box"><i class="fab fa-figma" aria-hidden="true"></i><span>Figma</span></div>
+                <div class="skill-box"><i class="fas fa-microchip" aria-hidden="true"></i><span>Edge AI</span></div>
+            </div>
+
+            <div class="skills-toggle-container">
+                <button
+                    type="button"
+                    class="skills-toggle"
+                    id="skills-toggle"
+                    aria-expanded="false"
+                    aria-controls="skills-details"
+                >
+                    <span class="skills-toggle-text">View All Skills</span>
+                    <i class="fas fa-chevron-down skills-toggle-icon" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="skills-details" id="skills-details" hidden>
+                <section class="skill-category" aria-labelledby="software-development-heading">
+                    <h3 id="software-development-heading">Software Development</h3>
+                    <ul class="skill-badges">
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Flask</li>
+                        <li>FastAPI</li>
+                    </ul>
+                </section>
+
+                <section class="skill-category" aria-labelledby="ai-systems-heading">
+                    <h3 id="ai-systems-heading">AI &amp; Systems</h3>
+                    <ul class="skill-badges">
+                        <li>Edge AI</li>
+                        <li>Computer Vision</li>
+                        <li>Raspberry Pi</li>
+                        <li>Arduino</li>
+                        <li>Sensor Integration</li>
+                    </ul>
+                </section>
+
+                <section class="skill-category" aria-labelledby="data-devops-heading">
+                    <h3 id="data-devops-heading">Data &amp; DevOps</h3>
+                    <ul class="skill-badges">
+                        <li>MongoDB</li>
+                        <li>SQLite</li>
+                        <li>Git</li>
+                        <li>GitLab CI/CD</li>
+                        <li>Postman</li>
+                        <li>Pytest</li>
+                        <li>Selenium</li>
+                    </ul>
+                </section>
+
+                <section class="skill-category" aria-labelledby="design-web-heading">
+                    <h3 id="design-web-heading">Design &amp; Web</h3>
+                    <ul class="skill-badges">
+                        <li>Figma</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>WordPress</li>
+                        <li>Canva</li>
+                    </ul>
+                </section>
             </div>
         </section>
 
@@ -218,6 +282,25 @@
                     updateSlider(currentSlide);
                 }
             }, 5000);
+
+            // --- Expandable Skills Logic ---
+            const skillsToggle = document.getElementById('skills-toggle');
+            const skillsDetails = document.getElementById('skills-details');
+
+            if (skillsToggle && skillsDetails) {
+                const skillsToggleText = skillsToggle.querySelector('.skills-toggle-text');
+
+                skillsToggle.addEventListener('click', () => {
+                    const isExpanded = skillsToggle.getAttribute('aria-expanded') === 'true';
+
+                    skillsToggle.setAttribute('aria-expanded', String(!isExpanded));
+                    skillsDetails.hidden = isExpanded;
+
+                    if (skillsToggleText) {
+                        skillsToggleText.textContent = isExpanded ? 'View All Skills' : 'Show Less';
+                    }
+                });
+            }
 
 
             // --- Navbar / Hamburger Logic ---
