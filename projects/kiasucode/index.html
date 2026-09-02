@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KiasuCode</title>
+    <title>KiasuCode | Digital Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -40,7 +40,7 @@
         <header style="margin-top: 50px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
             <div>
                 <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 10px; line-height: 1.1; margin-top: 0;">KiasuCode</h1>
-                <p style="font-size: 1.2rem; color: var(--text-secondary); font-family: 'Fira Code', monospace; margin: 0;">Academic Build Tracker with Dev-Lingua Personality</p>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); font-family: 'Fira Code', monospace; margin: 0;">Academic Operating System & Virtual Companion</p>
             </div>
 
             <a href="../" style="text-decoration: none; color: #000; font-family: 'Fira Code', monospace; font-size: 0.9rem; font-weight: 600; background: #f8fafc; padding: 10px 18px; border-radius: 8px; border: 2px solid #000; box-shadow: 3px 3px 0px #000; transition: all 0.2s ease;" onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='5px 5px 0px var(--accent)';" onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='3px 3px 0px #000';">
@@ -52,18 +52,27 @@
 
             <div class="project-details">
                 <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 15px;">The Problem</h2>
-                <p>Academic grade tracking is often a tedious, manual process prone to human error. Traditional tools lack engagement, making the maintenance of a consistent GPA repository feel like a chore rather than a vital part of a student's development cycle.</p>
+                <p>Academic tracking is often a tedious, manual process. Students juggle messy spreadsheets, scattered PDFs, and disconnected calendar apps to track their GPA, module files, and assignment deadlines. Traditional tools lack engagement, making the maintenance of a consistent study repository feel like a chore rather than a vital part of a student's development cycle.</p>
 
-                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">The Solution</h2>
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">The v3.0 Evolution</h2>
                 <p>
-                KiasuCode is a production-grade Telegram bot architected with <strong>Node.js</strong> and <strong>TypeScript</strong> that acts as a student's Senior Pair Programmer. Developed through a <strong>modern AI-assisted workflow</strong>, the project highlights technical maturity by leveraging LLMs for rapid prototyping and boilerplate scaffolding while maintaining strict architectural integrity through a normalized <strong>MySQL</strong> backend, live cloud deployment, and 100% type safety.
+                What began as a CLI-style Telegram bot has evolved into <strong>KiasuCode v3.0</strong>: a production-grade, omni-responsive web application architected with <strong>React, Tailwind CSS, Node.js, and MySQL</strong>. It acts as a unified student cockpit, replacing multiple fragmented apps with a highly customized, interactive ecosystem.
                 </p>
                 <p>
-                The core innovation is a custom <strong>Dev-Lingua system</strong> that intercepts bot responses to inject a hybrid persona of Singlish and developer jargon (e.g., "LGTM", "Steady lah"), ensuring a unique and engaging user experience. The architecture ensures that the personality layer remains decoupled from the core business logic, adhering to professional software design principles.
+                The platform demonstrates technical maturity through responsive grid architectures, automated CI/CD cloud deployments via Railway, and robust CRUD data management, all while retaining its original local Singaporean "Dev-Lingua" personality.
                 </p>
+
+                <h3 style="font-size: 1.25rem; font-weight: 800; margin-top: 25px; margin-bottom: 15px;">Core Platform Features</h3>
+                <ul style="line-height: 1.6; margin-bottom: 20px; padding-left: 20px; color: var(--text-secondary);">
+                    <li><strong>Skeuomorphic iPod Timetable:</strong> A retro, highly interactive media player interface mapped dynamically to a weekly class breakdown grid.</li>
+                    <li><strong>Pomodoro Pet Companion:</strong> Gamified focus sprints where users earn 'study coins' to feed and level up a virtual Tamagotchi-style pet.</li>
+                    <li><strong>Zero-Knowledge E2EE Chat:</strong> Multi-player virtual study rooms featuring device-to-device encrypted messaging where plaintext never touches the database.</li>
+                    <li><strong>DaysMatter Radar:</strong> Omnipresent milestone tracking with automated multi-day calendar rendering and synchronized To-Do lists.</li>
+                    <li><strong>Git-Style GPA Sandbox:</strong> An interactive "staging environment" to stress-test hypothetical exam targets before committing them to the academic database.</li>
+                </ul>
 
                 <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 30px; margin-bottom: 15px;">Dev-Lingua Injection Utility</h2>
-                <p style="margin-bottom: 15px; font-size: 0.95rem; color: var(--text-secondary);">Initially designed as a global middleware, the architecture was refactored to a targeted utility function to prevent state conflicts and give absolute control over context-aware messaging.</p>
+                <p style="margin-bottom: 15px; font-size: 0.95rem; color: var(--text-secondary);">To bridge the web dashboard with the legacy Telegram notification bot, the architecture utilizes a targeted utility function to inject a hybrid persona of Singlish and developer jargon (e.g., "LGTM", "Steady lah"), ensuring a unique user experience without polluting core business logic.</p>
                 <div class="code-snippet">
 <pre><code><span class="k">export async function</span> <span class="v">replyWithFlavor</span>(
     ctx: <span class="v">Context</span>, 
@@ -79,9 +88,9 @@
                 </div>
 
                 <section class="project-walkthrough">
-                    <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 50px; margin-bottom: 15px;">Bot Walkthrough</h2>
+                    <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 50px; margin-bottom: 15px;">Platform Walkthrough</h2>
                     <p class="walkthrough-description">
-                        Watch KiasuCode in action as the Telegram bot guides students through module setup, grade tracking, GPA calculations, academic progress checks, and its custom Dev-Lingua conversation experience.
+                        Watch KiasuCode in action as it guides students through module setup, the Pomodoro pet loop, E2EE chat, and its custom Dev-Lingua conversation experience.
                     </p>
 
                     <div class="project-card walkthrough-video-card">
@@ -93,7 +102,7 @@
                             </div>
 
                             <div class="file-name">
-                                kiasucode_demo_recording.mp4
+                                kiasucode_v3_demo.mp4
                             </div>
                         </div>
 
@@ -115,11 +124,13 @@
                 <div class="project-card" style="padding: 25px;">
                     <h3 style="font-size: 1.1rem; margin-bottom: 15px;">Tech Stack</h3>
                     <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px;">
-                        <span class="code-name">Node.js</span>
+                        <span class="code-name">React</span>
+                        <span class="code-name">Tailwind CSS</span>
+                        <span class="code-name">Node.js / Express</span>
                         <span class="code-name">TypeScript</span>
                         <span class="code-name">Telegraf</span>
                         <span class="code-name">MySQL</span>
-                        <span class="code-name">Railway (Cloud)</span>
+                        <span class="code-name">Railway (CI/CD)</span>
                         <span class="code-name" style="background: var(--accent-light); color: var(--accent);">AI-Assisted Dev</span>
                     </div>
 
@@ -128,12 +139,17 @@
 
                     <h3 style="font-size: 1.1rem; margin-bottom: 10px;">Links</h3>
 
-                    <a href="https://github.com/feliciatanxl/KiasuCode" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box;">
-                        <i class="fab fa-github"></i> View Repo
-                    </a>
-                    <a href="https://t.me/KiasuCodeBot" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box; margin-top: 10px;">
-                        <i class="fab fa-telegram"></i> Launch Bot
-                    </a>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <a href="https://kiasucode-frontend-production.up.railway.app" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box; background: #000; color: #fff; border: 2px solid #000; margin: 0;">
+                            <i class="fas fa-desktop"></i> Open Dashboard
+                        </a>
+                        <a href="https://github.com/feliciatanxl/KiasuCode" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box; background: #000; color: #fff; border: 2px solid #000; margin: 0;">
+                            <i class="fab fa-github"></i> View Repo
+                        </a>
+                        <a href="https://t.me/KiasuCodeBot" target="_blank" class="terminal-btn" style="width: 100%; justify-content: center; box-sizing: border-box; background: #000; color: #fff; border: 2px solid #000; margin: 0;">
+                            <i class="fab fa-telegram"></i> Legacy Bot
+                        </a>
+                    </div>
                 </div>
             </div>
 
