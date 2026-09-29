@@ -2,14 +2,17 @@
     const initResponsiveNav = () => {
         const menuToggle = document.getElementById('menu-toggle');
         const navLinks = document.getElementById('nav-links');
-        const dropdown = document.querySelector('.dropdown');
-        const dropdownTrigger = dropdown?.querySelector(':scope > a');
+        const dropdowns = document.querySelectorAll('.dropdown');
 
         if (!menuToggle || !navLinks) return;
 
+        const closeAllDropdowns = () => {
+            dropdowns.forEach((d) => d.classList.remove('touch-open'));
+        };
+
         const closeMenu = () => {
             navLinks.classList.remove('active');
-            dropdown?.classList.remove('touch-open');
+            closeAllDropdowns();
             const icon = menuToggle.querySelector('i');
             if (icon) icon.classList.replace('fa-times', 'fa-bars');
             menuToggle.setAttribute('aria-expanded', 'false');
@@ -20,22 +23,36 @@
         menuToggle.addEventListener('click', () => {
             const isOpen = navLinks.classList.contains('active');
             menuToggle.setAttribute('aria-expanded', String(isOpen));
-            if (!isOpen) dropdown?.classList.remove('touch-open');
+            if (!isOpen) closeAllDropdowns();
         });
 
         document.addEventListener('click', (event) => {
-            if (window.innerWidth <= 850 && dropdownTrigger?.contains(event.target)) {
+            const clickedTrigger = event.target.closest('.dropdown > a');
+            if (window.innerWidth <= 850 && clickedTrigger) {
                 event.preventDefault();
                 event.stopPropagation();
-                dropdown.classList.toggle('touch-open');
+                const parentDropdown = clickedTrigger.closest('.dropdown');
+                dropdowns.forEach((d) => {
+                    if (d === parentDropdown) {
+                        d.classList.toggle('touch-open');
+                    } else {
+                        d.classList.remove('touch-open');
+                    }
+                });
                 return;
             }
 
             const selectedLink = event.target.closest('.nav-links a');
             if (selectedLink) {
                 closeMenu();
-            } else if (dropdown && !dropdown.contains(event.target)) {
-                dropdown.classList.remove('touch-open');
+            } else {
+                let insideAny = false;
+                dropdowns.forEach((d) => {
+                    if (d.contains(event.target)) insideAny = true;
+                });
+                if (!insideAny) {
+                    closeAllDropdowns();
+                }
             }
         }, true);
 
