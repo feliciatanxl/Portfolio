@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyllage</title>
+  <meta name="description" content="Tyllage: an AgriTech portfolio case study covering an IoT MVP, ComCrop prototype, and MEOD Farm sales AI automation work in progress.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="../../assets/logo.png">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../../" class="logo">'FT<span class="cursor-blink">_</span>'</a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../../me/">About Me</a></li>
+        <li class="dropdown"><a href="#" style="cursor:pointer">Experiences <i class="fas fa-chevron-down" style="font-size:.7rem;margin-left:4px"></i></a><div class="dropdown-content"><a href="../../career/">&gt;_ Career Log</a><a href="../../global/">&gt;_ Global Footprint</a></div></li>
+        <li><a href="../" class="active" style="color:var(--accent)">Projects</a></li>
+        <li class="dropdown"><a href="#" style="cursor:pointer">Achievements <i class="fas fa-chevron-down" style="font-size:.7rem;margin-left:4px"></i></a><div class="dropdown-content"><a href="../../achievements/">&gt;_ Project Milestones</a><a href="../../awards/">&gt;_ Academic Awards</a><a href="../../certs/">&gt;_ Tech Certifications</a><a href="../../community/">&gt;_ Community Service</a></div></li>
+        <li><a href="../../competitions/">Competitions</a></li>
+        <li><a href="../../#contact" class="nav-btn">Contacts</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="container tyllage-detail">
+        <header style="margin-top: 50px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+            <div>
+                <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 10px; line-height: 1.1; margin-top: 0;">Tyllage</h1>
+                <p style="font-size: 1.2rem; color: var(--text-secondary); font-family: 'Fira Code', monospace; margin: 0;">AgriTech Platform &amp; Product Development</p>
+            </div>
+
+            <a href="../" style="text-decoration: none; color: #000; font-family: 'Fira Code', monospace; font-size: 0.9rem; font-weight: 600; background: #f8fafc; padding: 10px 18px; border-radius: 8px; border: 2px solid #000; box-shadow: 3px 3px 0px #000; transition: all 0.2s ease;" onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='5px 5px 0px var(--accent)';" onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='3px 3px 0px #000';">
+                cd ../projects <i class="fas fa-arrow-right"></i>
+            </a>
+        </header>
+    <div class="ty-project-columns">
+      <article class="project-details ty-main">
+        <h2>Project Overview</h2>
+        <p>Tyllage is an emerging AgriTech platform exploring how software, connected sensors, and AI-assisted workflows can support farm operations and business growth.</p>
+        <p>Its development currently spans three distinct initiatives: an IoT MVP originally intended for MEOD Farm, a ComCrop solution prototype, and a separate MEOD Farm sales AI automation initiative in progress.</p>
+
+        <h2>The Problem</h2>
+        <p>Farm operations and commercial processes can become fragmented when environmental readings, crop information, customer enquiries, and sales follow-ups are managed through separate tools or manual workflows.</p>
+        <p>Tyllage explores practical approaches to two different needs: improving visibility into farm conditions and supporting the commercial side of selling farm produce.</p>
+
+        <h2>What Tyllage Covers</h2>
+        <div class="code-snippet ty-highlight">
+          <p><strong>&gt; IoT MVP:</strong> Environmental sensing, device-to-dashboard data flows, and early crop intelligence experiments. Developed as a standalone prototype, originally intended for MEOD Farm.</p>
+          <p><strong>&gt; ComCrop Prototype:</strong> A publicly accessible prototype for proposed digital farm workflows, with product planning, deployment feasibility, and commercial considerations under exploration.</p>
+          <p><strong>&gt; MEOD Farm Sales AI Automation:</strong> An independent work-in-progress initiative focused on customer enquiries, WhatsApp-assisted communication, sales follow-ups, and produce order workflows.</p>
+        </div>
+
+        <h2>01 / IoT MVP Prototype</h2>
+        <p>The IoT MVP investigates how environmental sensor readings can be surfaced through a digital interface. My work has included ESP32-based experimentation and exploring the connection between physical hardware, application services, and farm-facing dashboards.</p>
+        <p class="ty-muted">Although originally intended for MEOD Farm, this prototype is presented separately from MEOD's planned sales automation work.</p>
+        <div class="project-card ty-window-preview">
+          <div class="window-bar"><div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div><span class="file-name">tyllage.com / iot-mvp</span></div>
+          <div class="ty-preview-content"><h3>IoT MVP — Live Website</h3><p>Open the prototype to explore the current interface and development direction.</p><div class="ty-preview-actions"><a class="terminal-btn" href="https://tyllage.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Explore IoT MVP</a></div></div>
+        </div>
+
+        <h2>02 / ComCrop Prototype</h2>
+        <p>The ComCrop track translates farm workflow ideas into a demonstrable application and a proposed implementation scope. It considers how an integrated platform might support monitoring, operational visibility, and commercial planning.</p>
+        <p>The prototype is publicly accessible on Railway. The broader work remains at the prototype and proposal stage rather than a confirmed farm deployment.</p>
+        <div class="project-card ty-window-preview">
+          <div class="window-bar"><div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div><span class="file-name">tyllage-comcrop.up.railway.app</span></div>
+          <div class="ty-preview-content"><h3>ComCrop — Online Prototype</h3><p>View the application prototype and the proposed farm digitalisation direction.</p><div class="ty-preview-actions"><a class="terminal-btn" href="https://tyllage-comcrop.up.railway.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Explore ComCrop</a></div></div>
+        </div>
+
+        <h2>03 / MEOD Farm Sales AI Automation</h2>
+        <p>This is a separate business-focused initiative, not a rename of the IoT MVP. The intended direction is an AI-assisted sales workflow that can help manage incoming produce enquiries, WhatsApp communication, follow-ups, and potential order handoffs.</p>
+        <div class="code-snippet ty-highlight"><p><strong>&gt; Current status:</strong> Work in progress. No public sales automation demo is available yet.</p><p><strong>&gt; Planned workflow:</strong> Customer enquiry &rarr; AI-assisted response / qualification &rarr; follow-up &rarr; human review or order handling.</p></div>
+
+        <h2>My Contributions</h2>
+        <p>My work across Tyllage combines product scoping, frontend and backend prototyping, IoT experiments, interface design, solution research, deployment exploration, and commercial feasibility planning.</p>
+        <p>The project also gives me experience thinking beyond individual software features: connecting technical feasibility with operational needs, implementation cost, and business value.</p>
+
+        <h2>Development Roadmap</h2>
+        <div class="code-snippet ty-highlight"><p><strong>&gt; IoT:</strong> Refine sensor-data ingestion, dashboard presentation, and prototype validation.</p><p><strong>&gt; ComCrop:</strong> Improve the solution prototype and validate requirements against the proposal.</p><p><strong>&gt; MEOD Sales AI:</strong> Develop a demonstrable customer enquiry and follow-up workflow before claiming an operational integration.</p></div>
+
+        <h2>Source Code &amp; Product Links</h2>
+        <p class="ty-muted">Tyllage's development work is organised under the GitHub organisation. Publicly accessible prototypes are linked here; a MEOD sales automation demo will be added when available.</p>
+        <div class="project-card ty-window-preview">
+          <div class="window-bar"><div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div><span class="file-name">Tyllage / repositories</span></div>
+          <div class="ty-preview-content"><h3>Explore Tyllage Development</h3><p>Browse the organisation's repositories and current public prototypes.</p><div class="ty-preview-actions"><a class="terminal-btn" href="https://github.com/Tyllage" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub Organisation</a></div></div>
+        </div>
+        <p class="ty-disclaimer">Note: Project descriptions distinguish working prototypes from exploratory concepts and planned automation features.</p>
+      </article>
+      <aside class="ty-aside" aria-label="Project details">
+        <div class="project-card ty-sidebar-card">
+          <h3>Tech Stack</h3>
+          <div class="ty-tags"><span class="code-name">React</span><span class="code-name">Node.js</span><span class="code-name">ESP32</span><span class="code-name">IoT</span><span class="code-name">REST APIs</span><span class="code-name">Railway</span><span class="code-name">Digital Twin</span><span class="code-name">GitHub</span><span class="code-name">AI Workflows</span></div>
+          <h3>Role</h3><p>Full-Stack Development / IoT Prototyping / Product &amp; Solution Planning</p>
+          <h3>Timeline</h3><p>Aug 2026 – Present</p>
+          <h3>Project Status</h3>
+          <span class="status-tag ty-status">IoT MVP · Prototype</span>
+          <span class="status-tag ty-status">ComCrop · Prototype / Proposal</span>
+          <span class="status-tag ty-status">MEOD Sales AI · WIP</span>
+          <h3>Links</h3>
+          <a class="terminal-btn" href="https://tyllage.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> IoT MVP</a>
+          <a class="terminal-btn" href="https://tyllage-comcrop.up.railway.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> ComCrop Prototype</a>
+          <a class="terminal-btn" href="https://github.com/Tyllage" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub Organisation</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer><p>© 2026 Felicia Tan. Handcrafted with &lt;code /&gt;</p></footer>
+  <button type="button" class="scroll-to-top" id="scroll-to-top" aria-label="Scroll to top" title="Scroll to top" aria-hidden="true" tabindex="-1"><span aria-hidden="true">&#8593;</span></button>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.toggle('fa-bars', !isOpen);
+      icon.classList.toggle('fa-times', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  </script>
+  <script src="../../responsive-nav.js"></script>
+</body>
+</html>

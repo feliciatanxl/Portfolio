@@ -1805,3 +1805,33 @@ footer {
         animation: none;
     }
 }
+
+/* Tyllage uses the shared project cards, code snippets and button animations. */
+.tyllage-detail { max-width: 900px; padding-bottom: 80px; }
+.tyllage-detail .ty-project-columns { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+.tyllage-detail .ty-main, .tyllage-detail .ty-aside { min-width: 0; }
+.tyllage-detail .ty-main h2 { font-size: 1.5rem; font-weight: 800; margin: 30px 0 15px; }
+.tyllage-detail .ty-main h2:first-child { margin-top: 0; }
+.tyllage-detail .ty-muted { color: var(--text-secondary); }
+.tyllage-detail .ty-highlight { overflow-wrap: anywhere; }
+.tyllage-detail .ty-highlight p:first-child { margin-top: 0; }
+.tyllage-detail .ty-highlight p:last-child { margin-bottom: 0; }
+.tyllage-detail .ty-highlight strong { color: var(--accent); }
+.tyllage-detail .ty-sidebar-card { padding: 25px; }
+.tyllage-detail .ty-sidebar-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+.tyllage-detail .ty-sidebar-card h3:first-child { margin-bottom: 15px; }
+.tyllage-detail .ty-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 25px; }
+.tyllage-detail .ty-sidebar-card p { font-size: .9rem; color: var(--text-secondary); margin-bottom: 25px; }
+.tyllage-detail .ty-sidebar-card .terminal-btn { width: 100%; box-sizing: border-box; justify-content: center; text-align: center; white-space: normal; }
+.tyllage-detail .ty-status { align-self: flex-start; margin: 2px 0 11px; }
+.tyllage-detail .ty-window-preview { margin: 25px 0; padding: 0; overflow: hidden; }
+.tyllage-detail .ty-window-preview .file-name { max-width: 75%; overflow-wrap: anywhere; text-align: right; }
+.tyllage-detail .ty-preview-content { padding: 25px; }
+.tyllage-detail .ty-preview-content h3 { font-size: 1.25rem; margin: 0 0 10px; }
+.tyllage-detail .ty-preview-content p { color: var(--text-secondary); }
+.tyllage-detail .ty-preview-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.tyllage-detail .ty-disclaimer { font-size: .8rem; color: var(--text-secondary); }
+@media (max-width: 800px) {
+    .tyllage-detail .ty-project-columns { grid-template-columns: 1fr; gap: 20px; }
+    .tyllage-detail .ty-sidebar-card { padding: 20px; }
+}
