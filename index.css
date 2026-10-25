@@ -1817,6 +1817,8 @@ footer {
 .tyllage-detail .ty-highlight p:first-child { margin-top: 0; }
 .tyllage-detail .ty-highlight p:last-child { margin-bottom: 0; }
 .tyllage-detail .ty-highlight strong { color: var(--accent); }
+.tyllage-detail .ty-highlight a { color: var(--accent); text-decoration: underline; }
+.tyllage-detail .ty-highlight a:hover { color: #fff; }
 .tyllage-detail .ty-sidebar-card { padding: 25px; }
 .tyllage-detail .ty-sidebar-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
 .tyllage-detail .ty-sidebar-card h3:first-child { margin-bottom: 15px; }
@@ -1829,7 +1831,8 @@ footer {
 .tyllage-detail .ty-preview-content { padding: 25px; }
 .tyllage-detail .ty-preview-content h3 { font-size: 1.25rem; margin: 0 0 10px; }
 .tyllage-detail .ty-preview-content p { color: var(--text-secondary); }
-.tyllage-detail .ty-preview-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.tyllage-detail .ty-preview-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.tyllage-detail .ty-preview-actions .terminal-btn { padding: 8px 10px; gap: 6px; font-size: 0.75rem; }
 .tyllage-detail .ty-disclaimer { font-size: .8rem; color: var(--text-secondary); }
 @media (max-width: 800px) {
     .tyllage-detail .ty-project-columns { grid-template-columns: 1fr; gap: 20px; }
