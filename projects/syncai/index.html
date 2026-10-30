@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyncAI</title>
+  <meta name="description" content="SyncAI is a proposed AI-powered smart work planner for Town Council officers, developed for EMS Challenge 12i. Explore the concept, AI features and Microsoft integration roadmap.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;family=Fira+Code:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="../../index.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="../../assets/logo.png" rel="icon" type="image/png">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a class="logo" href="../../">'FT<span class="cursor-blink">_</span>'</a>
+      <button aria-expanded="false" aria-label="Toggle navigation" class="menu-toggle" id="menu-toggle" type="button"><i class="fas fa-bars"></i></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../../me/">About Me</a></li>
+        <li class="dropdown"><a href="#" style="cursor:pointer">Experiences <i class="fas fa-chevron-down" style="font-size:.7rem;margin-left:4px"></i></a><div class="dropdown-content"><a href="../../career/">&gt;_ Career Log</a><a href="../../global/">&gt;_ Global Footprint</a></div></li>
+        <li><a class="active" href="../" style="color:var(--accent)">Projects</a></li>
+        <li class="dropdown"><a href="#" style="cursor:pointer">Achievements <i class="fas fa-chevron-down" style="font-size:.7rem;margin-left:4px"></i></a><div class="dropdown-content"><a href="../../achievements/">&gt;_ Project Milestones</a><a href="../../awards/">&gt;_ Academic Awards</a><a href="../../certs/">&gt;_ Tech Certifications</a><a href="../../community/">&gt;_ Community Service</a></div></li>
+        <li><a href="../../competitions/">Competitions</a></li>
+        <li><a class="nav-btn" href="../../#contact">Contacts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container tyllage-detail">
+    <header style="margin-top: 50px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <h1 style="font-size: 3rem; font-weight: 800; margin-bottom: 10px; line-height: 1.1; margin-top: 0;">SyncAI</h1>
+        <p style="font-size: 1.2rem; color: var(--text-secondary); font-family: 'Fira Code', monospace; margin: 0;">AI-Powered Smart Work Planner | EMS Challenge 12i</p>
+      </div>
+      <a href="../" onmouseout="this.style.transform='translate(0, 0)'; this.style.boxShadow='3px 3px 0px #000';" onmouseover="this.style.transform='translate(-2px, -2px)'; this.style.boxShadow='5px 5px 0px var(--accent)';" style="text-decoration: none; color: #000; font-family: 'Fira Code', monospace; font-size: 0.9rem; font-weight: 600; background: #f8fafc; padding: 10px 18px; border-radius: 8px; border: 2px solid #000; box-shadow: 3px 3px 0px #000; transition: all 0.2s ease;">
+        cd ../projects <i class="fas fa-arrow-right"></i>
+      </a>
+    </header>
+
+    <div class="ty-project-columns">
+      <article class="project-details ty-main">
+        <h2>Project Overview</h2>
+        <p><strong>SyncAI</strong> is an AI-powered Smart Work Planner concept developed by a three-member team for <strong>EMS Challenge 12i</strong>. It explores how Town Council officers can prioritise their responsibilities, organise available time and respond more effectively to unexpected changes.</p>
+        <p>Designed as a <strong>Microsoft-based workforce planning assistant</strong>, SyncAI aims to bring together assigned tasks, calendar commitments and practical AI recommendations in a single planning experience for officers and supervisors.</p>
+        <p class="ty-muted">This page documents ongoing project discovery, architecture planning and prototype exploration. The AI features and Microsoft 365 integrations below describe proposed capabilities unless explicitly stated otherwise.</p>
+
+        <h2>The Problem We Are Exploring</h2>
+        <p>Officers juggle deadlines, meetings, recurring duties and urgent operational requests. A task list alone cannot tell them whether everything can realistically fit into their day or what needs to change when priorities shift.</p>
+        <p>Supervisors may also need better visibility into team capacity, potential delays and operational continuity when an officer becomes unexpectedly unavailable. These are design questions to validate with the client, not claims of measured problems at a particular Town Council.</p>
+
+        <h2>What We're Designing</h2>
+        <div class="code-snippet ty-highlight">
+          <p><strong>&gt; AI Task Intelligence:</strong> Explore natural-language task input, explainable priority recommendations, effort estimates and deadline-aware task organisation.</p>
+          <p><strong>&gt; Smart Daily &amp; Weekly Planning:</strong> Generate feasible suggested time blocks around meetings, working hours, task effort and dependencies.</p>
+          <p><strong>&gt; Dynamic Replanning:</strong> Demonstrate how urgent assignments affect the current schedule, with proposed alternatives for officer approval.</p>
+          <p><strong>&gt; Team Capacity &amp; Continuity:</strong> Explore workload visibility, early risk indicators, unexpected absence scenarios and supervisor-reviewed reassignment suggestions.</p>
+        </div>
+
+        <h2>01 / UI &amp; Prototype Exploration</h2>
+        <p>The initial direction is a <strong>responsive HTML, CSS and JavaScript concept prototype</strong> with separate officer and supervisor experiences. The interface is being explored around a personal dashboard, Smart Planner, workload overview, AI insights and a What-If Simulator.</p>
+        <div class="project-card ty-window-preview">
+          <div class="window-bar"><div class="dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div><span class="file-name">syncai / concept-prototype</span></div>
+          <div class="ty-preview-content">
+            <h3>SyncAI — Smart Work Planner</h3>
+            <p>The design explores task priorities, realistic calendar suggestions and supervisor workload analysis. Early demonstrations may use simulated scenarios and synthetic data, rather than live AI or Town Council systems.</p>
+            <div class="ty-preview-actions">
+              <a class="terminal-btn" href="https://canva.link/gtk18ohrs1coerx" target="_blank" rel="noopener noreferrer"><i class="fas fa-lightbulb"></i> Brainstorming Whiteboard</a>
+            </div>
+          </div>
+        </div>
+
+        <h2>02 / My Role &amp; Contributions</h2>
+        <p>Working with two teammates, I am involved in exploring the challenge requirements and shaping how SyncAI's AI modules, user journeys and Microsoft-based architecture could fit together. Responsibilities will continue to evolve as the team's implementation scope is finalised.</p>
+        <div class="code-snippet ty-highlight">
+          <p><strong>&gt; Requirements &amp; Problem Discovery:</strong> Develop meaningful questions around prioritisation, scheduling, staff availability, workload capacity and supervisory decision-making.</p>
+          <p><strong>&gt; AI Feature Exploration:</strong> Brainstorm task intelligence, feasible schedule generation, workload forecasting and absence impact simulations.</p>
+          <p><strong>&gt; Frontend &amp; UX Prototyping:</strong> Explore a clear, responsive officer dashboard and supervisor interface before moving to the full application.</p>
+          <p><strong>&gt; Technical Planning:</strong> Evaluate React, Node.js/Express, PostgreSQL, Microsoft Graph and Azure AI services, including JavaScript versus TypeScript options.</p>
+        </div>
+
+        <h2>03 / Proposed Microsoft &amp; AI Architecture</h2>
+        <p>SyncAI is planned around a web frontend, an API backend and a shared data model. Subject to the client's environment and permissions, <strong>Microsoft Entra ID</strong> could provide authentication, while <strong>Microsoft Graph</strong> could connect calendars and tasks from Outlook and Microsoft To Do.</p>
+        <div class="code-snippet ty-highlight">
+          <p><strong>&gt; Microsoft Data:</strong> Outlook Calendar and Microsoft To Do as the initial integration priorities; Teams, Planner and SharePoint remain optional.</p>
+          <p><strong>&gt; Task Understanding:</strong> Azure OpenAI is being considered for extracting tasks and explaining recommendations, with application-side validation.</p>
+          <p><strong>&gt; Scheduling Logic:</strong> A rule-based or constraint-aware engine would check availability and feasibility rather than allowing a language model to invent a timetable.</p>
+          <p><strong>&gt; Human Oversight:</strong> Officers and supervisors would review proposed scheduling or reassignment changes before anything is written back.</p>
+        </div>
+
+        <h2>04 / Development Approach</h2>
+        <div class="code-snippet ty-highlight">
+          <p><strong>&gt; Discovery:</strong> Validate real operational workflows, constraints, user roles and success criteria with EMS.</p>
+          <p><strong>&gt; Prototype:</strong> Build interactive officer and supervisor screens using synthetic tasks, calendars and disruption scenarios.</p>
+          <p><strong>&gt; MVP:</strong> Develop task management, feasible scheduling and clear explanations with a shared application data model.</p>
+          <p><strong>&gt; Integration &amp; Evaluation:</strong> Add approved Microsoft APIs and AI services where accessible, then evaluate planning accuracy, usefulness and usability.</p>
+        </div>
+
+        <p class="ty-disclaimer"><strong>Project status:</strong> Early-stage discovery and prototype exploration. Proposed AI intelligence, performance gains and external integrations are not presented as completed, validated or deployed functionality. This independent portfolio summary does not imply EMS endorsement.</p>
+      </article>
+
+      <aside aria-label="Project details" class="ty-aside">
+        <div class="project-card ty-sidebar-card">
+          <h3>Focus</h3>
+          <p>AI-assisted scheduling, task prioritisation &amp; workforce capacity planning</p>
+          <h3>Technology Options</h3>
+          <div class="ty-tags">
+            <span class="code-name">HTML / CSS / JS Prototype</span>
+            <span class="code-name">React (planned)</span>
+            <span class="code-name">JavaScript / TypeScript</span>
+            <span class="code-name">Node.js / Express</span>
+            <span class="code-name">PostgreSQL</span>
+            <span class="code-name">REST APIs</span>
+            <span class="code-name">Microsoft Graph (planned)</span>
+            <span class="code-name">Azure OpenAI (planned)</span>
+          </div>
+          <h3>My Role</h3>
+          <p>Project Team Member / AI Feature &amp; Full-Stack Solution Planning</p>
+          <h3>Timeline</h3>
+          <p>Oct 2026 – Present</p>
+          <h3>Project Status</h3>
+          <span class="status-tag ty-status">EMS 12i · Discovery</span>
+          <span class="status-tag ty-status">UI Prototype · Exploration</span>
+          <span class="status-tag ty-status">Microsoft 365 · Planned</span>
+          <h3>Links</h3>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a class="terminal-btn" href="https://canva.link/gtk18ohrs1coerx" target="_blank" rel="noopener noreferrer" style="width: 100%; justify-content: center; box-sizing: border-box; background: #000; color: #fff; border: 2px solid #000; margin: 0;">
+              <i class="fas fa-pen-ruler"></i> Canva Whiteboard
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer><p>© 2026 Felicia Tan. Handcrafted with &lt;code /&gt;</p></footer>
+  <button aria-hidden="true" aria-label="Scroll to top" class="scroll-to-top" id="scroll-to-top" tabindex="-1" title="Scroll to top" type="button"><span aria-hidden="true">↑</span></button>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.toggle('fa-bars', !isOpen);
+      icon.classList.toggle('fa-times', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  </script>
+  <script src="../../responsive-nav.js"></script>
+</body>
+</html>
