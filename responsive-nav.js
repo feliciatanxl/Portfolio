@@ -7,7 +7,10 @@
         if (!menuToggle || !navLinks) return;
 
         const closeAllDropdowns = () => {
-            dropdowns.forEach((d) => d.classList.remove('touch-open'));
+            dropdowns.forEach((d) => {
+                d.classList.remove('touch-open');
+                d.querySelector(':scope > a')?.setAttribute('aria-expanded', 'false');
+            });
         };
 
         const closeMenu = () => {
@@ -20,10 +23,25 @@
 
         menuToggle.setAttribute('aria-expanded', navLinks.classList.contains('active') ? 'true' : 'false');
 
-        menuToggle.addEventListener('click', () => {
-            const isOpen = navLinks.classList.contains('active');
+        menuToggle.setAttribute('aria-controls', navLinks.id);
+        menuToggle.addEventListener('click', (event) => {
+            // Own the toggle here, including pages with legacy inline handlers.
+            event.stopImmediatePropagation();
+            const isOpen = navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-times', isOpen);
+                icon.classList.toggle('fa-bars', !isOpen);
+            }
             menuToggle.setAttribute('aria-expanded', String(isOpen));
             if (!isOpen) closeAllDropdowns();
+        }, true);
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+                closeMenu();
+                menuToggle.focus();
+            }
         });
 
         document.addEventListener('click', (event) => {
@@ -38,6 +56,7 @@
                     } else {
                         d.classList.remove('touch-open');
                     }
+                    d.querySelector(':scope > a')?.setAttribute('aria-expanded', String(d.classList.contains('touch-open')));
                 });
                 return;
             }

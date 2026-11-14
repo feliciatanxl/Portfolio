@@ -119,6 +119,10 @@ body {
         padding: 30px 0;
         border-bottom: var(--border-width) solid #000;
         gap: 25px;
+        box-sizing: border-box;
+        max-height: calc(100dvh - 100% - 8px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
         z-index: 1000;
     }
 
@@ -1373,6 +1377,10 @@ footer {
     box-sizing: border-box;
 }
 
+.timeline-item .project-card[hidden] {
+    display: none;
+}
+
 .timeline-item .window-body {
     display: block;
 }
@@ -1853,6 +1861,17 @@ footer {
 .back-link { text-decoration: none; color: #000; font-family: 'Fira Code', monospace; font-size: 0.9rem; font-weight: 600; background: #f8fafc; padding: 10px 18px; border-radius: 8px; border: 2px solid #000; box-shadow: 3px 3px 0 #000; transition: all 0.2s ease; }
 .back-link:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--accent); }
 
+@media (max-width: 600px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-title {
+        overflow-wrap: anywhere;
+    }
+}
+
 .terminal-btn-light { background: #fff; color: #000; }
 
 /* EchoSync + MakerLab two-column layout */
@@ -1866,6 +1885,44 @@ footer {
 .tyllage-detail .ty-links { display: flex; flex-direction: column; gap: 8px; }
 .tyllage-detail .ty-links .terminal-btn { margin: 0; }
 .tyllage-detail .ty-sidebar-card .ty-legal { margin-top: 28px; font-size: .82rem; }
+
+.tyllage-detail .ty-kicker {
+  display: inline-block; margin: 0 0 12px; font: 600 11px/1.5 'Fira Code', monospace;
+  text-transform: uppercase; letter-spacing: .07em; color: #42644f;
+}
+.tyllage-detail .ty-lead { font-size: clamp(1.05rem, 1.6vw, 1.32rem); line-height: 1.52; font-weight: 600; margin-bottom: 14px; }
+.tyllage-detail .ty-product-hero {
+  padding: clamp(17px, 3vw, 26px); border: 1px solid #cddfd2;
+  border-left: 5px solid #1c513c; background: #f0f6ef; margin: 0 0 28px;
+}
+.tyllage-detail .ty-product-hero p:last-child { margin-bottom: 0; }
+.tyllage-detail .ty-hero-note { font-size: .83rem; color: #567160; margin-top: 8px; }
+.tyllage-detail .ty-status-inline { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 0; }
+.tyllage-detail .ty-pill { font: 600 11px/1.35 'Fira Code', monospace; background: white; color: #244b36; border: 1px solid #b7d3be; padding: 6px 9px; }
+.tyllage-detail .ty-flow { list-style: none; padding: 0; margin: 14px 0 12px; display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 8px; }
+.tyllage-detail .ty-flow li { position: relative; border: 1px solid #d4ded6; background: #f8faf7; padding: 12px 8px; min-width: 0; }
+.tyllage-detail .ty-flow .ty-step-num { display: block; font: 600 10px 'Fira Code', monospace; color: #4b7b5b; margin-bottom: 7px; }
+.tyllage-detail .ty-flow strong { display: block; font-size: .79rem; line-height: 1.35; overflow-wrap: anywhere; }
+.tyllage-detail .ty-flow small { display: block; font-size: .69rem; line-height: 1.5; margin-top: 5px; color: #647568; overflow-wrap: anywhere; }
+.tyllage-detail .ty-points { padding-left: 18px; line-height: 1.65; }
+.tyllage-detail .ty-points li { padding-left: 3px; margin-bottom: 8px; }
+.tyllage-detail .ty-label { color: #42644f; font-size: .8rem; font-weight: 600; }
+.tyllage-detail .ty-window-preview .ty-preview-content p { line-height: 1.65; }
+.tyllage-detail .ty-sidebar-card .ty-info-label { margin-bottom: 7px; }
+.tyllage-detail .ty-timeline { display: grid; gap: 8px; margin: 0 0 24px; }
+.tyllage-detail .ty-timeline-item { border-left: 3px solid #9aba9e; padding: 7px 0 7px 13px; }
+.tyllage-detail .ty-timeline-item strong { display: block; font-size: .91rem; }
+.tyllage-detail .ty-timeline-item span { display: block; font-size: .83rem; color: #5d665f; margin-top: 2px; }
+.tyllage-detail .ty-compact-legal { font-size: .81rem; line-height: 1.6; }
+.tyllage-detail .ty-compact-legal p { margin-bottom: 9px; }
+@media (max-width: 800px) {
+  .tyllage-detail .ty-flow { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .tyllage-detail .ty-flow li:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 440px) {
+  .tyllage-detail .ty-flow { grid-template-columns: 1fr; }
+  .tyllage-detail .ty-flow li:last-child { grid-column: auto; }
+}
 
 /* ShieldQuest */
 .shieldquest-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 40px; }
